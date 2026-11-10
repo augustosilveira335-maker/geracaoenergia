@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Energia solar em Novo Hamburgo | Geração Energia</title>
+<meta name="description" content="Projeto, instalação e monitoramento de usina solar para casas, empresas e propriedades rurais em Novo Hamburgo, no Vale do Sinos e no litoral do RS. Simule sua conta de luz.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#06142B">
+<meta property="og:title" content="Energia solar em Novo Hamburgo | Geração Energia">
+<meta property="og:description" content="O sol já bate no seu telhado. Agora ele paga a conta. Simule sua conta de luz.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/ev-galpao-13000.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 285'%3E%3Cg fill='%232B74D9'%3E%3Cpolygon points='45,8 140,8 164,98 69,98'/%3E%3Cpolygon points='170,5 335,5 380,165 215,165' fill='%233FA6F5'/%3E%3Cpolygon points='8,122 175,122 218,275 50,275' fill='%231B58C4'/%3E%3Cpolygon points='225,188 315,188 340,272 250,272'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Geração Energia","description":"Projeto, instalação e monitoramento de usinas de energia solar.","telephone":"+55 51 99609-5749","address":{"@type":"PostalAddress","streetAddress":"R. Benjamin Constant, 591, loja 02, Rio Branco","addressLocality":"Novo Hamburgo","addressRegion":"RS","postalCode":"93336-140","addressCountry":"BR"},"sameAs":["https://www.instagram.com/geracaoenergiars.com.br/"]}</script>
+<style>
+:root{--navy:#06142B;--navy2:#0B2148;--blue:#1F63D1;--lime:#D5F23C;--paper:#F6F5F1;--card:#ECEAE3;--ink:#0B1624;--gray:#8C939B;--line:rgba(11,22,36,.14);--r:28px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.38;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.mono{font-family:'DM Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.ic{width:1em;height:1em;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 8px 0 24px;border-radius:999px;font-weight:500;font-size:16px;letter-spacing:-.01em;transition:transform .25s,background .25s}
+.btn .go{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:16px;transition:transform .35s}
+.btn:hover .go{transform:rotate(45deg)}
+.btn.lime{background:var(--lime);color:var(--navy)}
+.btn.lime .go{background:var(--navy);color:var(--lime)}
+.btn.glass{background:rgba(255,255,255,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;border:1px solid rgba(255,255,255,.25);padding:0 24px 0 18px;gap:10px}
+.btn.glass:hover{background:rgba(255,255,255,.22)}
+.btn.line{border:1px solid var(--ink);padding:0 8px 0 24px}
+.btn.line .go{background:var(--ink);color:#fff}
+.btn:active{transform:scale(.98)}
+
+/* cabeçalho */
+.top{position:fixed;z-index:50;top:18px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 9px 0 22px;border-radius:999px;background:rgba(6,20,43,.62);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.12);color:#fff}
+.logo{display:flex;align-items:center;gap:10px}
+.logo svg{height:26px;width:auto}
+.logo b{font-weight:600;font-size:13px;line-height:1.02;letter-spacing:.05em;text-transform:uppercase}
+.top nav{display:flex;gap:26px;font-size:15px;color:rgba(255,255,255,.78)}
+.top nav a{transition:color .2s}
+.top nav a:hover{color:#fff}
+.top .btn{height:44px;font-size:15px;padding:0 6px 0 18px}
+.top .btn .go{width:32px;height:32px}
+
+/* topo */
+.hero{position:relative;margin:10px;border-radius:34px;overflow:hidden;min-height:calc(100vh - 20px);min-height:calc(100svh - 20px);color:#fff;background:linear-gradient(180deg,var(--sky1,#0B3A9A) 0%,var(--sky2,#4F93E8) 100%);isolation:isolate;display:flex;flex-direction:column}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,10,24,.5) 0%,rgba(3,10,24,.14) 55%,rgba(3,10,24,0) 100%),linear-gradient(0deg,rgba(3,10,24,.35) 0%,transparent 45%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.1;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.7fr);column-gap:32px;row-gap:28px;align-items:end;padding:clamp(104px,13vh,140px) clamp(22px,4vw,56px) 0}
+.hero h1{grid-column:1/-1;font-weight:400;font-size:clamp(40px,6.3vw,100px);line-height:1;letter-spacing:-.04em}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero .sub{margin-top:26px;max-width:470px;font-size:clamp(16px,1.35vw,19px);color:rgba(255,255,255,.82);line-height:1.45}
+.hero .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.gcard{display:grid;grid-template-columns:116px 1fr;gap:14px;align-items:center;padding:10px;border-radius:26px;background:rgba(255,255,255,.92);color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.gcard img{width:116px;height:104px;object-fit:cover;border-radius:18px}
+.gcard small{display:block;color:var(--gray);font-size:12.5px;margin-bottom:4px}
+.gcard b{display:block;font-weight:500;font-size:17px;line-height:1.15;letter-spacing:-.02em}
+.gcard span{display:block;margin-top:6px;font-size:13px;color:#4A5560;line-height:1.3}
+.arc{position:relative;margin-top:auto;height:clamp(190px,23vw,330px);width:100%}
+.arc svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.arc .lb{position:absolute;bottom:16px;color:rgba(255,255,255,.72)}
+.arc .lb.l{left:clamp(22px,4vw,56px)}
+.arc .lb.r{right:clamp(22px,4vw,56px);text-align:right}
+.arc .lb.c{left:50%;transform:translateX(-50%);color:#fff;text-align:center;white-space:nowrap}
+.lb b{font-weight:400;color:var(--lime)}
+
+/* faixa de números */
+.stats{padding:clamp(56px,8vw,110px) 0 clamp(40px,6vw,80px)}
+.stats .g{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:0 clamp(14px,2.2vw,32px);border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat strong{display:block;font-weight:400;font-size:clamp(44px,5.4vw,84px);letter-spacing:-.05em;line-height:1}
+.stat p{margin-top:14px;font-size:15px;color:#4A5560;max-width:250px;line-height:1.38}
+.stat small{display:block;margin-top:12px;color:var(--gray)}
+
+/* sobre */
+.sec{padding:clamp(56px,8vw,120px) 0}
+.lab{font-size:clamp(20px,2vw,28px);letter-spacing:-.03em;font-weight:400}
+.two{font-weight:400;font-size:clamp(30px,4.3vw,66px);line-height:1.06;letter-spacing:-.045em;color:var(--ink)}
+.two span.g{color:var(--gray)}
+.two .th{display:inline-block;width:2.5em;height:.98em;border-radius:.3em;overflow:hidden;vertical-align:-.13em;margin:0 .06em}
+.two .th img{width:100%;height:100%;object-fit:cover}
+.sobre{display:grid;grid-template-columns:minmax(0,.22fr) minmax(0,1fr);gap:24px}
+.sobre .two{max-width:1020px}
+.sobre .btn{margin-top:36px}
+
+/* soluções */
+.head2{display:grid;grid-template-columns:minmax(0,.4fr) minmax(0,1fr);gap:24px;align-items:start}
+.svc{margin-top:clamp(40px,6vw,80px);list-style:none;border-bottom:1px solid var(--line)}
+.svc li{position:relative;display:grid;grid-template-columns:70px minmax(0,1.15fr) minmax(0,1fr) 44px;gap:18px;align-items:center;padding:clamp(24px,3.4vw,44px) 0;border-top:1px solid var(--line);transition:opacity .3s}
+.svc:hover li:not(:hover){opacity:.42}
+.svc .n{font-size:14px;color:var(--gray)}
+.svc h3{font-weight:400;font-size:clamp(26px,3.5vw,52px);letter-spacing:-.045em;line-height:1}
+.svc p{font-size:clamp(14.5px,1.2vw,17px);color:#55606B;line-height:1.42;max-width:400px}
+.svc .ar{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
+.svc li:hover .ar{background:var(--lime);border-color:var(--lime);transform:rotate(45deg)}
+.svc .pv{position:absolute;left:44%;top:50%;width:min(270px,22vw);pointer-events:none;opacity:0;transform:translate(-50%,-46%) rotate(-4deg) scale(.88);transition:opacity .35s,transform .45s cubic-bezier(.2,.8,.2,1);z-index:3}
+.svc .pv img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;box-shadow:0 22px 50px rgba(6,20,43,.28)}
+.svc .pv::after{content:"";position:absolute;right:-14px;bottom:-14px;width:38px;height:38px;border-radius:50%;background:var(--lime)}
+.svc li:hover .pv{opacity:1;transform:translate(-50%,-50%) rotate(-4deg) scale(1)}
+
+/* obras */
+.obras{margin:10px;border-radius:34px;background:var(--navy);color:#fff;padding:clamp(52px,7vw,100px) 0 clamp(44px,6vw,80px);overflow:hidden}
+.obras .top2{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.obras h2{font-weight:400;font-size:clamp(36px,5.4vw,84px);letter-spacing:-.05em;line-height:.98}
+.obras h2 em{font-style:normal;color:var(--lime)}
+.obras .note{max-width:330px;color:rgba(255,255,255,.62);font-size:15px;line-height:1.42}
+.ctrl{display:flex;gap:10px}
+.ctrl button{width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:grid;place-items:center;font-size:20px;transition:.25s}
+.ctrl button:hover{background:var(--lime);border-color:var(--lime);color:var(--navy)}
+.rail{margin-top:clamp(34px,5vw,60px);display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(20px,4vw,56px) 6px max(clamp(20px,4vw,56px),calc((100vw - 20px - 1360px)/2 + clamp(20px,4vw,56px)));scroll-padding-left:max(clamp(20px,4vw,56px),calc((100vw - 20px - 1360px)/2 + clamp(20px,4vw,56px)));scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.ob{flex:0 0 clamp(290px,31vw,440px);scroll-snap-align:start;background:var(--navy2);border-radius:26px;padding:12px 12px 22px;display:flex;flex-direction:column}
+.ob img{width:100%;aspect-ratio:514/332;object-fit:cover;border-radius:18px}
+.ob .m{display:flex;justify-content:space-between;margin:18px 10px 0;color:rgba(255,255,255,.6)}
+.ob .v{margin:10px 10px 0;font-size:clamp(44px,4.6vw,68px);font-weight:400;letter-spacing:-.05em;line-height:1}
+.ob .v small{font-size:15px;letter-spacing:0;color:rgba(255,255,255,.62);margin-left:8px;font-weight:300}
+.ob .ct{margin:20px 10px 0;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:15px;color:#fff;border-top:1px solid rgba(255,255,255,.14);padding-top:16px}
+.ob .ct i{font-style:normal;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;transition:.3s}
+.ob:hover .ct i{background:var(--lime);color:var(--navy);transform:rotate(45deg)}
+
+/* blocos */
+.bento{display:grid;grid-template-columns:1.12fr 1fr 1fr;grid-auto-rows:auto;gap:14px;margin-top:clamp(36px,5vw,64px)}
+.bc{border-radius:var(--r);overflow:hidden;position:relative}
+.b1{grid-row:span 2;background:var(--card);padding:12px 12px 26px}
+.b1 img{width:100%;aspect-ratio:514/332;object-fit:cover;border-radius:20px}
+.b1 h3{margin:24px 14px 0;font-weight:400;font-size:clamp(24px,2.4vw,34px);letter-spacing:-.04em}
+.b1 p{margin:12px 14px 0;color:#4A5560;font-size:15px;line-height:1.46}
+.b1 .src{margin:16px 14px 0;color:var(--gray)}
+.b2{background:var(--navy);color:#fff;padding:26px 26px 26px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px}
+.b2 h3{font-weight:400;font-size:clamp(22px,2vw,29px);letter-spacing:-.04em;line-height:1.08;max-width:260px}
+.bars{display:flex;align-items:flex-end;gap:12px;height:200px;margin-top:20px}
+.bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:8px;align-items:stretch;text-align:left}
+.bars i{display:block;flex:none;height:calc(var(--v)*1.3px);border-radius:14px 14px 4px 4px;background:rgba(255,255,255,.14);transform-origin:bottom;transform:scaleY(0);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.bars div:nth-child(1) i{--v:60}
+.bars div:nth-child(2) i{--v:75;background:rgba(213,242,60,.55)}
+.bars div:nth-child(3) i{--v:90;background:var(--lime)}
+.in .bars i,.bars.in i{transform:scaleY(1)}
+.bars b{font-weight:400;font-size:22px;letter-spacing:-.03em}
+.bars small{color:rgba(255,255,255,.58)}
+.b3{min-height:340px}
+.b3 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.b3::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,20,43,.7),transparent 55%)}
+.b3 .cap{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;color:#fff;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.b3 .cap b{font-weight:400;font-size:24px;letter-spacing:-.04em;line-height:1.05}
+.b4{grid-column:span 2;background:var(--lime);color:var(--navy);padding:30px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:200px}
+.b4 h3{font-weight:400;font-size:clamp(28px,3.4vw,50px);letter-spacing:-.05em;line-height:1}
+.b4 .go{flex:none;width:76px;height:76px;border-radius:50%;background:var(--navy);color:var(--lime);display:grid;place-items:center;font-size:28px;transition:transform .4s}
+.b4:hover .go{transform:rotate(45deg)}
+
+/* simulador */
+.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:start}
+.sim h2{font-weight:400;font-size:clamp(34px,4.6vw,70px);letter-spacing:-.05em;line-height:1}
+.sim h2 .g{color:var(--gray)}
+.conta{margin-top:clamp(28px,4vw,48px)}
+.conta .val{font-size:clamp(56px,7vw,104px);letter-spacing:-.055em;line-height:1;font-weight:400}
+.conta .val small{font-size:.32em;letter-spacing:-.02em;color:var(--gray);margin-left:6px}
+.conta input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;margin-top:26px;border-radius:4px;background:linear-gradient(90deg,var(--ink) var(--p,20%),rgba(11,22,36,.16) var(--p,20%))}
+.conta input::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:var(--lime);border:2px solid var(--ink);cursor:grab}
+.conta input::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--lime);border:2px solid var(--ink);cursor:grab}
+.conta .rg{display:flex;justify-content:space-between;margin-top:12px;color:var(--gray)}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.res div{background:var(--card);border-radius:22px;padding:20px 22px 22px}
+.res div.big{grid-column:span 2;background:var(--navy);color:#fff}
+.res small{display:block;color:var(--gray)}
+.res .big small{color:rgba(255,255,255,.6)}
+.res b{display:block;margin-top:10px;font-weight:400;font-size:clamp(30px,3.2vw,46px);letter-spacing:-.045em;line-height:1}
+.res .big b{font-size:clamp(38px,4.4vw,64px);color:var(--lime)}
+.res .big span{display:block;margin-top:8px;color:rgba(255,255,255,.7);font-size:15px}
+.sim .btn{margin-top:14px;width:100%;justify-content:space-between;height:60px;padding-left:28px;font-size:17px}
+.sim .nt{margin-top:16px;color:var(--gray);font-size:13px;line-height:1.45;max-width:520px}
+
+/* como funciona */
+.steps{margin-top:clamp(36px,5vw,64px);list-style:none;border-bottom:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:70px minmax(0,1.1fr) minmax(0,1fr);gap:18px;align-items:baseline;padding:clamp(20px,2.6vw,34px) 0;border-top:1px solid var(--line)}
+.steps .n{font-size:14px;color:var(--gray)}
+.steps h3{font-weight:400;font-size:clamp(24px,2.8vw,40px);letter-spacing:-.045em;line-height:1.02}
+.steps p{font-size:16px;color:#55606B;max-width:420px}
+
+/* dúvidas */
+.faq{margin-top:clamp(30px,4vw,56px)}
+.faq details{border-top:1px solid var(--line);padding:0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:26px 0;font-size:clamp(19px,2vw,28px);letter-spacing:-.035em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-style:normal;font-size:20px;line-height:1;transition:.3s}
+.faq details[open] summary i{background:var(--lime);border-color:var(--lime);transform:rotate(45deg)}
+.faq p{padding:0 56px 28px 0;max-width:720px;color:#55606B;font-size:16.5px;line-height:1.5}
+
+/* contato e rodapé */
+.foot{margin:10px;border-radius:34px;background:var(--navy);color:#fff;overflow:hidden;padding:clamp(52px,7vw,100px) 0 0}
+.ct-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(30px,6vw,100px);align-items:start}
+.foot h2{font-weight:400;font-size:clamp(40px,6vw,92px);letter-spacing:-.055em;line-height:.96}
+.foot h2 em{font-style:normal;color:var(--lime)}
+.foot .tel{display:block;margin-top:clamp(26px,3.4vw,44px);font-size:clamp(30px,4.2vw,62px);letter-spacing:-.05em;line-height:1}
+.foot .tel:hover{color:var(--lime)}
+.foot .ad{margin-top:18px;color:rgba(255,255,255,.66);font-size:16px;line-height:1.5;max-width:380px}
+.foot .ig{display:inline-flex;align-items:center;gap:10px;margin-top:20px;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:3px}
+.foot .ig:hover{color:var(--lime);border-color:var(--lime)}
+.foot form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:clamp(20px,2.4vw,32px);display:grid;gap:12px}
+.foot label{display:block}
+.foot label span{display:block;margin-bottom:7px;color:rgba(255,255,255,.58)}
+.foot input,.foot select{width:100%;height:54px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#fff;font:inherit;font-size:16px;padding:0 16px;outline:none;transition:border-color .2s}
+.foot select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%23fff' stroke-width='1.6'%3E%3Cpath d='m1 1 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.foot select option{color:#111}
+.foot input:focus,.foot select:focus{border-color:var(--lime)}
+.foot input::placeholder{color:rgba(255,255,255,.38)}
+.foot .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.foot form .btn{margin-top:6px;height:60px;width:100%;justify-content:space-between;padding-left:28px;font-size:17px}
+.fach{margin-top:clamp(40px,5vw,70px);display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;max-width:470px}
+.fach img{width:150px;height:150px;object-fit:cover;border-radius:22px}
+.fach p{color:rgba(255,255,255,.7);font-size:15px;line-height:1.45}
+.fach b{display:block;color:#fff;font-weight:500;font-size:17px;margin-bottom:4px;letter-spacing:-.02em}
+.wm{margin-top:clamp(30px,4vw,60px);font-weight:600;font-size:10.6vw;line-height:1.12;letter-spacing:-.06em;white-space:nowrap;text-align:center;text-transform:uppercase;color:#fff;user-select:none}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 0 26px;color:rgba(255,255,255,.5);font-size:13px;border-top:1px solid rgba(255,255,255,.1);margin-top:10px}
+.legal.after{margin-top:0}
+
+/* revelar */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.bars i{transition:none;transform:none}}
+
+@media (max-width:1060px){
+  .top nav{display:none}
+  .hero-in{grid-template-columns:1fr;gap:26px}
+  .gcard{max-width:430px}
+  .stats .g{grid-template-columns:1fr 1fr;row-gap:36px}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .sobre,.head2{grid-template-columns:1fr;gap:14px}
+  .bento{grid-template-columns:1fr 1fr}
+  .b1{grid-row:auto;grid-column:span 2}
+  .b4{grid-column:span 2}
+  .sim,.ct-g{grid-template-columns:1fr}
+  .svc li{grid-template-columns:42px minmax(0,1fr) 44px}
+  .svc p{grid-column:2/3;grid-row:2}
+  .svc .ar{grid-row:1/3;grid-column:3}
+  .svc .pv{display:none}
+  .steps li{grid-template-columns:42px 1fr}
+  .steps p{grid-column:2}
+}
+@media (max-width:640px){
+  .top{top:12px;height:56px;padding-left:16px}
+  .logo b{font-size:11.5px}
+  .hero{margin:6px;border-radius:26px}
+  .hero-in{padding-top:108px}
+  .arc .lb.c{display:none}
+  .stats .g{grid-template-columns:1fr 1fr;column-gap:0}
+  .stat{padding:0 14px}
+  .stat:nth-child(odd){padding-left:0;border-left:0}
+  .bento{grid-template-columns:1fr}
+  .b1,.b4{grid-column:auto}
+  .b4{flex-direction:row}
+  .res{grid-template-columns:1fr 1fr}
+  .foot .r2{grid-template-columns:1fr}
+  .fach{grid-template-columns:110px 1fr}
+  .fach img{width:110px;height:110px}
+  .obras,.foot{margin:6px;border-radius:26px}
+  .wm{font-size:11.6vw}
+  .faq p{padding-right:0}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1550B8"/><stop offset="1" stop-color="#2F86E6"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2B74D9"/><stop offset="1" stop-color="#47C0FF"/></linearGradient>
+    <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="arr" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="logo" viewBox="0 0 390 285"><g stroke-linejoin="round" stroke-width="8"><polygon points="45,8 140,8 164,98 69,98" fill="url(#g1)" stroke="url(#g1)"/><polygon points="170,5 335,5 380,165 215,165" fill="url(#g2)" stroke="url(#g2)"/><polygon points="8,122 175,122 218,275 50,275" fill="url(#g1)" stroke="url(#g1)"/><polygon points="225,188 315,188 340,272 250,272" fill="url(#g1)" stroke="url(#g1)"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <a class="logo" href="#inicio" aria-label="Geração Energia, início"><svg viewBox="0 0 390 285" aria-hidden="true"><use href="#logo"/></svg><b>Geração<br>Energia</b></a>
+  <nav aria-label="Principal"><a href="#solucoes">Soluções</a><a href="#obras">Obras</a><a href="#simulador">Simulador</a><a href="#como">Como funciona</a><a href="#contato">Contato</a></nav>
+  <a class="btn lime" href="#simulador">Simular conta <span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></a>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-in">
+    <h1>O sol já bate no seu telhado.<br>Agora ele <em>paga a conta.</em></h1>
+    <div>
+      <p class="sub">Projeto, instalação e monitoramento de usina solar para casas, empresas e propriedades rurais em Novo Hamburgo, no Vale do Sinos e no litoral.</p>
+      <div class="cta">
+        <a class="btn lime" href="#simulador">Simular minha conta <span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></a>
+        <a class="btn glass" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20energia%20solar." target="_blank" rel="noopener"><svg class="ic" style="font-size:20px" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+      </div>
+    </div>
+    <a class="gcard" href="#obras" aria-label="Ver obras entregues">
+      <img src="img/ev-galpao-13000.webp" width="232" height="208" alt="Usina solar em galpão industrial de Estância Velha, vista de drone">
+      <div><small>Obra entregue</small><b>Estância Velha, RS</b><span>13.000 kWh de produção média por mês</span></div>
+    </a>
+  </div>
+  <div class="arc" id="arc" aria-hidden="true">
+    <svg id="arcsvg"></svg>
+    <span class="lb l mono" id="lbL">Nascer</span>
+    <span class="lb c mono" id="lbC">Agora</span>
+    <span class="lb r mono" id="lbR">Pôr</span>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap g">
+    <div class="stat rv"><strong>9.611</strong><p>sistemas solares em Novo Hamburgo. É a 4ª cidade do RS.</p><small class="mono">ANEEL · 11/2026</small></div>
+    <div class="stat rv"><strong>+31%</strong><p>na tarifa residencial da RGE em dois anos, sem impostos.</p><small class="mono">ANEEL · REH 3.590/2026</small></div>
+    <div class="stat rv"><strong>60%</strong><p>do Fio B já é cobrado de quem instala em 2026. Em 2027 sobe para 75%.</p><small class="mono">Lei 14.300</small></div>
+    <div class="stat rv"><strong>2022</strong><p>ano em que a Geração abriu as portas, na rua Benjamin Constant.</p><small class="mono">CNPJ 48.343.029/0001-00</small></div>
+  </div>
+</section>
+
+<section class="sec" id="sobre" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="wrap sobre">
+    <p class="lab rv">Sobre</p>
+    <div>
+      <p class="two rv">A Geração Energia projeta, instala e monitora usinas solares <span class="th"><img src="img/ev-galpao-7000a.webp" width="257" height="166" alt="" loading="lazy"></span> em Estância Velha, Nova Bréscia, Nova Hartz, Torres e Novo Hamburgo. <span class="g">Cada telhado é desenhado para o consumo de quem mora ou trabalha embaixo dele, de casa a <span class="th"><img src="img/nb-rural-7500.webp" width="257" height="166" alt="" loading="lazy"></span> aviário e galpão.</span></p>
+      <a class="btn line rv" href="#contato">Falar com a equipe <span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="solucoes" style="padding-top:clamp(30px,4vw,60px)">
+  <div class="wrap">
+    <div class="head2">
+      <p class="lab rv">Soluções</p>
+      <p class="two rv">Quatro formas de usar o sol, <span class="g">do telhado de casa ao mercado livre de energia.</span></p>
+    </div>
+    <ul class="svc">
+      <li class="rv"><span class="n mono">01</span><h3>Sistema on grid</h3><p>A usina injeta o excedente na rede da RGE e vira crédito na sua conta de luz.</p><span class="ar"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span><span class="pv"><img src="img/ev-galpao-7000a.webp" width="257" height="166" alt="" loading="lazy"></span></li>
+      <li class="rv"><span class="n mono">02</span><h3>Híbrido com bateria</h3><p>Guarda energia para a noite e mantém a casa ou o negócio ligado quando a rede cai.</p><span class="ar"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span><span class="pv"><img src="img/nhartz-53kwp.webp" width="257" height="166" alt="" loading="lazy"></span></li>
+      <li class="rv"><span class="n mono">03</span><h3>Mercado livre de energia</h3><p>Para empresas de alto consumo escolherem o fornecedor e negociarem o preço da energia.</p><span class="ar"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span><span class="pv"><img src="img/ev-galpao-13000.webp" width="257" height="166" alt="" loading="lazy"></span></li>
+      <li class="rv"><span class="n mono">04</span><h3>Recarga veicular</h3><p>Estação de recarga para carro elétrico em casa, na empresa ou no condomínio.</p><span class="ar"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span><span class="pv"><img src="img/torres-700.webp" width="257" height="166" alt="" loading="lazy"></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="obras" id="obras">
+  <div class="wrap top2">
+    <div><p class="mono rv" style="color:rgba(255,255,255,.6);margin-bottom:18px">Obras entregues</p><h2 class="rv">Telhados reais<br>que <em>já geram.</em></h2></div>
+    <div style="display:flex;flex-direction:column;gap:22px;align-items:flex-end">
+      <p class="note rv">Fotos de drone das obras da Geração. O número é a produção média mensal informada em cada obra.</p>
+      <div class="ctrl"><button type="button" id="prev" aria-label="Obra anterior">←</button><button type="button" id="next" aria-label="Próxima obra">→</button></div>
+    </div>
+  </div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Obras entregues">
+    <article class="ob"><img src="img/ev-galpao-13000.webp" width="514" height="332" alt="Galpão industrial com usina solar em Estância Velha"><div class="m mono"><span>Estância Velha</span><span>Galpão</span></div><p class="v">13.000<small>kWh por mês</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20a%20obra%20de%20Est%C3%A2ncia%20Velha%20no%20site%20e%20quero%20uma%20proposta%20parecida." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+    <article class="ob"><img src="img/nb-rural-7500.webp" width="514" height="332" alt="Usina solar em propriedade rural de Nova Bréscia" loading="lazy"><div class="m mono"><span>Nova Bréscia</span><span>Propriedade rural</span></div><p class="v">7.500<small>kWh por mês</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20a%20obra%20de%20Nova%20Br%C3%A9scia%20no%20site%20e%20quero%20uma%20proposta%20para%20minha%20propriedade." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+    <article class="ob"><img src="img/ev-galpao-7000a.webp" width="514" height="332" alt="Galpão com usina solar em Estância Velha" loading="lazy"><div class="m mono"><span>Estância Velha</span><span>Galpão</span></div><p class="v">7.000<small>kWh por mês</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20uma%20obra%20de%20Est%C3%A2ncia%20Velha%20no%20site%20e%20quero%20uma%20proposta%20parecida." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+    <article class="ob"><img src="img/ev-galpao-7000b.webp" width="514" height="332" alt="Galpão comercial com usina solar em Estância Velha" loading="lazy"><div class="m mono"><span>Estância Velha</span><span>Galpão</span></div><p class="v">7.000<small>kWh por mês</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20uma%20obra%20de%20Est%C3%A2ncia%20Velha%20no%20site%20e%20quero%20uma%20proposta%20parecida." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+    <article class="ob"><img src="img/nh-6kwp.webp" width="514" height="332" alt="Telhado metálico com painéis solares em Novo Hamburgo" loading="lazy"><div class="m mono"><span>Novo Hamburgo</span><span>Telhado</span></div><p class="v">6,0<small>kWp de potência</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20a%20obra%20de%20Novo%20Hamburgo%20no%20site%20e%20quero%20uma%20proposta." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+    <article class="ob"><img src="img/nhartz-53kwp.webp" width="514" height="332" alt="Painéis solares em telhado de Nova Hartz" loading="lazy"><div class="m mono"><span>Nova Hartz</span><span>Telhado</span></div><p class="v">5,3<small>kWp de potência</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20a%20obra%20de%20Nova%20Hartz%20no%20site%20e%20quero%20uma%20proposta." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+    <article class="ob"><img src="img/ev-telhado-53kwp.webp" width="514" height="332" alt="Painéis solares em telhado residencial de Estância Velha" loading="lazy"><div class="m mono"><span>Estância Velha</span><span>Telhado</span></div><p class="v">5,3<small>kWp de potência</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20uma%20obra%20de%20Est%C3%A2ncia%20Velha%20no%20site%20e%20quero%20uma%20proposta." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+    <article class="ob"><img src="img/torres-700.webp" width="514" height="332" alt="Casa em Torres com painéis solares no telhado" loading="lazy"><div class="m mono"><span>Torres</span><span>Residência</span></div><p class="v">700<small>kWh por mês</small></p><a class="ct" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vi%20a%20obra%20de%20Torres%20no%20site%20e%20quero%20uma%20proposta%20para%20minha%20casa." target="_blank" rel="noopener">Quero uma assim <i><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></i></a></article>
+  </div>
+</section>
+
+<section class="sec" id="campo">
+  <div class="wrap">
+    <div class="head2">
+      <p class="lab rv">Do campo à cidade</p>
+      <p class="two rv">A conta sobe todo ano. <span class="g">A regra do Fio B também, e a usina é a forma de sair na frente.</span></p>
+    </div>
+    <div class="bento">
+      <article class="bc b1 rv">
+        <img src="img/nb-rural-7500.webp" width="514" height="332" alt="Aviários com painéis solares em Nova Bréscia" loading="lazy">
+        <h3>Para o campo</h3>
+        <p>Nova Bréscia, onde a Geração tem obra, é a 1ª do RS em aves: 6,3 milhões de cabeças. Aviário consome energia o ano todo, e a usina entra no custo fixo da granja. Há linhas de crédito rural e de energia renovável, como Pronaf Eco e Inovagro.</p>
+        <p class="src mono">IBGE · Pesquisa da Pecuária Municipal 2025</p>
+      </article>
+      <article class="bc b2 rv">
+        <h3>O Fio B cobrado de quem instala sobe a cada ano.</h3>
+        <div class="bars" id="bars"><div><i></i><b>60%</b><small class="mono">2026</small></div><div><i></i><b>75%</b><small class="mono">2027</small></div><div><i></i><b>90%</b><small class="mono">2028</small></div></div>
+      </article>
+      <article class="bc b3 rv">
+        <img src="img/ev-galpao-7000b.webp" width="514" height="332" alt="Galpão comercial com usina solar" loading="lazy">
+        <div class="cap"><b>Indústria e<br>comércio</b><span class="mono">1/3 da potência solar de NH</span></div>
+      </article>
+      <a class="bc b4 rv" href="#simulador"><h3>Quanto o sol<br>tira da sua conta?</h3><span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="simulador" style="padding-top:0">
+  <div class="wrap sim">
+    <div>
+      <h2 class="rv">Simule sua conta <span class="g">de luz.</span></h2>
+      <div class="conta rv">
+        <p class="mono" style="color:var(--gray);margin-bottom:12px">Quanto você paga de luz por mês</p>
+        <div class="val" id="valor">R$ 500<small>/mês</small></div>
+        <input type="range" id="conta" min="200" max="6000" step="50" value="500" aria-label="Conta de luz mensal em reais">
+        <div class="rg mono"><span>R$ 200</span><span>R$ 6.000</span></div>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="res">
+        <div class="big"><small class="mono">Economia estimada</small><b id="eco">R$ 0</b><span id="ecoA">por mês</span></div>
+        <div><small class="mono">Sistema</small><b id="kwp">0 kWp</b></div>
+        <div><small class="mono">Placas de 550 W</small><b id="pl">0</b></div>
+      </div>
+      <a class="btn lime" id="simwa" href="https://wa.me/5551996095749" target="_blank" rel="noopener">Receber proposta no WhatsApp <span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></a>
+      <p class="nt">Estimativa com tarifa média de R$ 1,20 por kWh e geração de 110 kWh por kWp ao mês no RS. O projeto confirma os números, com a regra do Fio B do ano.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="como" style="padding-top:0">
+  <div class="wrap">
+    <div class="head2">
+      <p class="lab rv">Como funciona</p>
+      <p class="two rv">Seis passos, <span class="g">do orçamento à usina ligada.</span></p>
+    </div>
+    <ol class="steps">
+      <li class="rv"><span class="n mono">01</span><h3>Orçamento sem custo</h3><p>Você envia a conta de luz e a equipe monta a simulação.</p></li>
+      <li class="rv"><span class="n mono">02</span><h3>Crédito</h3><p>Se for financiar, a proposta já considera banco ou cooperativa.</p></li>
+      <li class="rv"><span class="n mono">03</span><h3>Contrato</h3><p>Escopo, prazo e equipamentos combinados por escrito.</p></li>
+      <li class="rv"><span class="n mono">04</span><h3>Projeto</h3><p>Dimensionamento e projeto elétrico para o seu telhado.</p></li>
+      <li class="rv"><span class="n mono">05</span><h3>Instalação</h3><p>A usina sobe no telhado e é testada antes da entrega.</p></li>
+      <li class="rv"><span class="n mono">06</span><h3>Homologação</h3><p>A RGE vistoria, troca o medidor e a usina entra em operação.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="duvidas" style="padding-top:0">
+  <div class="wrap">
+    <div class="head2">
+      <p class="lab rv">Dúvidas</p>
+      <p class="two rv">O que mais perguntam <span class="g">antes de fechar.</span></p>
+    </div>
+    <div class="faq rv">
+      <details><summary>A regra do Fio B vale para mim?<i>+</i></summary><p>Vale para quem instala agora. A Lei 14.300 cobra uma parte do Fio B que sobe a cada ano: 60% em 2026, 75% em 2027 e 90% em 2028. A economia continua grande. Peça sempre a simulação já com o percentual do ano.</p></details>
+      <details><summary>Funciona em dia nublado?<i>+</i></summary><p>Funciona, com menos geração. Nos dias de sol a usina gera mais do que você consome, e o excedente vira crédito para os dias nublados e para a noite.</p></details>
+      <details><summary>Preciso de bateria?<i>+</i></summary><p>Na maioria dos casos, não. No sistema on grid a rede da RGE faz o papel de bateria. A bateria entra quando você quer energia durante uma queda da rede.</p></details>
+      <details><summary>Como funciona o financiamento?<i>+</i></summary><p>Existem linhas de bancos e de cooperativas, inclusive para o produtor rural. A equipe monta o pedido junto com o projeto.</p></details>
+      <details><summary>O que é a homologação?<i>+</i></summary><p>É a aprovação da RGE para ligar a usina à rede. Depois da instalação, a distribuidora vistoria, troca o medidor e libera a geração. A Geração cuida da documentação.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot" id="contato">
+  <div class="wrap">
+    <div class="ct-g">
+      <div>
+        <h2 class="rv">Peça sua<br><em>proposta.</em></h2>
+        <a class="tel rv" href="https://wa.me/5551996095749" target="_blank" rel="noopener">(51) 99609-5749</a>
+        <p class="ad rv">R. Benjamin Constant, 591, loja 02<br>Rio Branco, Novo Hamburgo, RS</p>
+        <a class="ig rv" href="https://www.instagram.com/geracaoenergiars.com.br/" target="_blank" rel="noopener"><svg class="ic" style="font-size:20px" aria-hidden="true"><use href="#ig"/></svg>@geracaoenergiars.com.br</a>
+        <div class="fach rv"><img src="img/fachada.webp" width="300" height="300" alt="Fachada da Geração Energia na rua Benjamin Constant, em Novo Hamburgo"><p><b>Venha conhecer.</b>A loja fica no bairro Rio Branco, em Novo Hamburgo.</p></div>
+      </div>
+      <form id="form" class="rv">
+        <label><span class="mono">Seu nome</span><input name="nome" autocomplete="name" required placeholder="Como podemos chamar você"></label>
+        <div class="r2">
+          <label><span class="mono">Cidade</span><input name="cidade" autocomplete="address-level2" required placeholder="Novo Hamburgo"></label>
+          <label><span class="mono">Conta de luz por mês</span><input name="conta" inputmode="numeric" required placeholder="R$ 500"></label>
+        </div>
+        <label><span class="mono">O sistema é para</span><select name="tipo"><option>Minha casa</option><option>Minha empresa</option><option>Propriedade rural</option></select></label>
+        <button class="btn lime" type="submit">Enviar pelo WhatsApp <span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></button>
+      </form>
+    </div>
+  </div>
+  <div class="wm" aria-hidden="true">Geração Energia</div>
+  <div class="wrap">
+    <div class="legal after"><span>Geração Energia &amp; Soluções Ltda · CNPJ 48.343.029/0001-00</span><span>Prévia de proposta · Anvil Marketing</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document, LAT=-29.6914, LON=-51.1306, NS='http://www.w3.org/2000/svg';
+  var wa='https://wa.me/5551996095749?text=';
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* sol de Novo Hamburgo (NOAA simplificado) */
+  function sol(ms){
+    var R=Math.PI/180, D=180/Math.PI, jd=ms/864e5+2440587.5, jc=(jd-2451545)/36525;
+    var L=(280.46646+jc*(36000.76983+jc*0.0003032))%360, M=357.52911+jc*(35999.05029-0.0001537*jc);
+    var e=0.016708634-jc*(0.000042037+0.0000001267*jc);
+    var C=Math.sin(M*R)*(1.914602-jc*(0.004817+0.000014*jc))+Math.sin(2*M*R)*(0.019993-0.000101*jc)+Math.sin(3*M*R)*0.000289;
+    var om=125.04-1934.136*jc, lam=L+C-0.00569-0.00478*Math.sin(om*R);
+    var e0=23+(26+((21.448-jc*(46.815+jc*(0.00059-jc*0.001813))))/60)/60, eps=e0+0.00256*Math.cos(om*R);
+    var dec=Math.asin(Math.sin(eps*R)*Math.sin(lam*R)), y=Math.pow(Math.tan(eps*R/2),2);
+    var eq=4*D*(y*Math.sin(2*L*R)-2*e*Math.sin(M*R)+4*e*y*Math.sin(M*R)*Math.cos(2*L*R)-0.5*y*y*Math.sin(4*L*R)-1.25*e*e*Math.sin(2*M*R));
+    var t=new Date(ms), mu=t.getUTCHours()*60+t.getUTCMinutes()+t.getUTCSeconds()/60;
+    var tst=((mu+eq+4*LON)%1440+1440)%1440, ha=tst/4-180, lr=LAT*R;
+    var cz=Math.sin(lr)*Math.sin(dec)+Math.cos(lr)*Math.cos(dec)*Math.cos(ha*R);
+    var el=90-D*Math.acos(Math.max(-1,Math.min(1,cz)));
+    var h0=D*Math.acos(Math.cos(90.833*R)/(Math.cos(lr)*Math.cos(dec))-Math.tan(lr)*Math.tan(dec));
+    var noon=720-4*LON-eq, d0=Date.UTC(t.getUTCFullYear(),t.getUTCMonth(),t.getUTCDate());
+    return {el:el, rise:d0+(noon-4*h0)*6e4, set:d0+(noon+4*h0)*6e4};
+  }
+  var fmt=new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',timeZone:'America/Sao_Paulo',hour12:false});
+  function hhmm(ms){return fmt.format(new Date(ms))}
+  function hora(ms){return +fmt.format(new Date(ms)).slice(0,2)}
+
+  /* cor do céu pela altura real do sol */
+  var K=[[-18,'#030A18','#0A1634'],[-6,'#0A1B44','#3A2F6B'],[0,'#16337F','#E58A4B'],[8,'#1650C4','#E9A86E'],[25,'#0F47B8','#6FA9EE'],[60,'#0A3CA0','#4A8FE6']];
+  function rgb(h){return [1,3,5].map(function(i){return parseInt(h.substr(i,2),16)})}
+  function mix(a,b,t){a=rgb(a);b=rgb(b);return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
+  function ceu(el){
+    var i=0; if(el<=K[0][0]) return [K[0][1],K[0][2]]; if(el>=K[K.length-1][0]){var k=K[K.length-1];return [k[1],k[2]]}
+    while(el>K[i+1][0]) i++;
+    var t=(el-K[i][0])/(K[i+1][0]-K[i][0]);
+    return [mix(K[i][1],K[i+1][1],t),mix(K[i][2],K[i+1][2],t)];
+  }
+
+  var hero=d.getElementById('inicio'), arc=d.getElementById('arc'), svg=d.getElementById('arcsvg');
+  var lbL=d.getElementById('lbL'), lbC=d.getElementById('lbC'), lbR=d.getElementById('lbR');
+  var anim=0, shown=false;
+  function el(n,a){var x=d.createElementNS(NS,n);for(var k in a)x.setAttribute(k,a[k]);return x}
+
+  function desenha(animar){
+    var now=Date.now(), s=sol(now), W=arc.clientWidth, H=arc.clientHeight;
+    var c=ceu(s.el); hero.style.setProperty('--sky1',c[0]); hero.style.setProperty('--sky2',c[1]);
+    var pad=Math.max(22,Math.min(56,W*0.04)), base=H-74, rx=(W-2*pad)/2, ry=base-16, cx=W/2;
+    var f=(now-s.rise)/(s.set-s.rise), dia=f>=0&&f<=1, fc=Math.max(0,Math.min(1,f));
+    svg.setAttribute('viewBox','0 0 '+W+' '+H); svg.innerHTML='';
+    var ax=function(t){return cx-rx*Math.cos(Math.PI*t)}, ay=function(t){return base-ry*Math.sin(Math.PI*t)};
+    var dpath='M'+(cx-rx)+' '+base+' A'+rx+' '+ry+' 0 0 1 '+(cx+rx)+' '+base;
+    svg.appendChild(el('line',{x1:0,x2:W,y1:base,y2:base,stroke:'rgba(255,255,255,.28)','stroke-width':1}));
+    svg.appendChild(el('path',{d:dpath,fill:'none',stroke:'rgba(255,255,255,.4)','stroke-width':1.2,'stroke-dasharray':'2 7','stroke-linecap':'round'}));
+    var solid=el('path',{d:dpath,fill:'none',stroke:'rgba(255,255,255,.9)','stroke-width':1.6,'stroke-linecap':'round'}); svg.appendChild(solid);
+    var L=solid.getTotalLength();
+    /* horas */
+    var h0=hora(s.rise)+1, h1=hora(s.set), ultX=-99;
+    for(var h=h0;h<=h1;h++){
+      var ms=s.rise+((h-hora(s.rise))*3600e3)-(+fmt.format(new Date(s.rise)).slice(3,5))*6e4;
+      var t=(ms-s.rise)/(s.set-s.rise); if(t<=0||t>=1) continue;
+      var x=ax(t); svg.appendChild(el('line',{x1:x,x2:x,y1:base,y2:base+7,stroke:'rgba(255,255,255,.5)'}));
+      if(Math.abs(x-ultX)>52){ultX=x;var tx=el('text',{x:x,y:base+22,'text-anchor':'middle',fill:'rgba(255,255,255,.6)','font-size':10.5,'font-family':'DM Mono,monospace'});tx.textContent=(h<10?'0':'')+h+'h';svg.appendChild(tx)}
+    }
+    var px=ax(fc), py=ay(fc);
+    var guia=el('line',{x1:px,x2:px,y1:py,y2:base,stroke:'#D5F23C','stroke-width':1,'stroke-dasharray':'2 4',opacity:dia?.7:0}); svg.appendChild(guia);
+    var ring=el('circle',{cx:px,cy:py,r:17,fill:'none',stroke:'#D5F23C','stroke-width':1,opacity:.4}); svg.appendChild(ring);
+    var dot=el('circle',{cx:px,cy:py,r:dia?9:7,fill:dia?'#D5F23C':'none',stroke:'#D5F23C','stroke-width':dia?0:2}); svg.appendChild(dot);
+    var alvo=fc*L;
+    if(animar&&!reduce){
+      var t0=performance.now(), dur=2300; solid.setAttribute('stroke-dasharray','0 '+L); dot.style.opacity=0;ring.style.opacity=0;guia.style.opacity=0;
+      cancelAnimationFrame(anim);
+      (function passo(n){
+        var p=Math.min(1,(n-t0)/dur), e=1-Math.pow(1-p,3), g=fc*e;
+        solid.setAttribute('stroke-dasharray',(g*L)+' '+L);
+        var X=ax(g),Y=ay(g); dot.setAttribute('cx',X);dot.setAttribute('cy',Y);ring.setAttribute('cx',X);ring.setAttribute('cy',Y);guia.setAttribute('x1',X);guia.setAttribute('x2',X);guia.setAttribute('y1',Y);
+        dot.style.opacity=1;ring.style.opacity=.4;guia.style.opacity=dia?.7:0;
+        if(p<1) anim=requestAnimationFrame(passo);
+      })(t0);
+    } else solid.setAttribute('stroke-dasharray',alvo+' '+L);
+    lbL.innerHTML='Nascer <b>'+hhmm(s.rise)+'</b>'; lbR.innerHTML='Pôr <b>'+hhmm(s.set)+'</b>';
+    if(dia) lbC.innerHTML='Agora em Novo Hamburgo · <b>'+hhmm(now)+'</b> · sol a <b>'+Math.max(0,Math.round(s.el))+'°</b>';
+    else { var prox=now>s.set?s.rise+864e5:s.rise; lbC.innerHTML='O sol volta às <b>'+hhmm(prox)+'</b>'; }
+  }
+  var rt; addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){desenha(false)},120)});
+  desenha(true);
+  setInterval(function(){desenha(false)},60000);
+
+  /* cabeçalho, revelar, barras */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  d.querySelectorAll('.rv,.bars').forEach(function(n){io.observe(n)});
+
+  /* carrossel de obras */
+  var rail=d.getElementById('rail'), step=function(){var c=rail.querySelector('.ob');return c.offsetWidth+16};
+  d.getElementById('next').onclick=function(){rail.scrollBy({left:step(),behavior:'smooth'})};
+  d.getElementById('prev').onclick=function(){rail.scrollBy({left:-step(),behavior:'smooth'})};
+
+  /* simulador */
+  var cs=d.getElementById('conta'), nf=function(v,c){return v.toLocaleString('pt-BR',{maximumFractionDigits:c||0,minimumFractionDigits:c||0})};
+  function calc(){
+    var conta=+cs.value, tarifa=1.2, kwh=conta/tarifa, comp=Math.max(kwh-100,0), kwp=Math.max(comp/110,0.5);
+    kwp=Math.round(kwp*10)/10; var pl=Math.ceil(kwp*1000/550), eco=comp*tarifa*0.85, ano=eco*12;
+    cs.style.setProperty('--p',((conta-cs.min)/(cs.max-cs.min)*100)+'%');
+    d.getElementById('valor').innerHTML='R$ '+nf(conta)+'<small>/mês</small>';
+    d.getElementById('eco').textContent='R$ '+nf(Math.round(eco/10)*10);
+    d.getElementById('ecoA').textContent='por mês, cerca de R$ '+nf(Math.round(ano/100)*100)+' por ano';
+    d.getElementById('kwp').textContent=nf(kwp,1)+' kWp';
+    d.getElementById('pl').textContent=pl;
+    d.getElementById('simwa').href=wa+encodeURIComponent('Olá! Fiz a simulação no site: conta de luz de R$ '+nf(conta)+' por mês, sistema estimado de '+nf(kwp,1)+' kWp (cerca de '+pl+' placas). Quero uma proposta.');
+  }
+  cs.addEventListener('input',calc); calc();
+
+  /* formulário vira mensagem de WhatsApp */
+  d.getElementById('form').addEventListener('submit',function(ev){
+    ev.preventDefault(); var f=new FormData(ev.target);
+    var m='Olá! Vim pelo site. Meu nome é '+f.get('nome')+', sou de '+f.get('cidade')+', pago cerca de '+f.get('conta')+' de luz por mês e o sistema é para: '+String(f.get('tipo')).toLowerCase()+'. Quero uma proposta.';
+    window.open(wa+encodeURIComponent(m),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
