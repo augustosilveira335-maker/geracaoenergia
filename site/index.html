@@ -76,7 +76,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .lb b{font-weight:400;color:var(--lime)}
 
 /* faixa de números */
-.stats{padding:clamp(56px,8vw,110px) 0 clamp(40px,6vw,80px)}
+.stats{padding:clamp(48px,7vw,96px) 0 clamp(40px,6vw,80px)}
 .stats .g{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:0 clamp(14px,2.2vw,32px);border-left:1px solid var(--line)}
 .stat:first-child{border-left:0;padding-left:0}
@@ -173,6 +173,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .res div{background:var(--card);border-radius:22px;padding:20px 22px 22px}
 .res div.big{grid-column:span 2;background:var(--navy);color:#fff}
+.res div.wide{grid-column:span 2}
+.res .fn{display:block;margin-top:10px;color:var(--gray);font-size:13.5px;line-height:1.4}
 .res small{display:block;color:var(--gray)}
 .res .big small{color:rgba(255,255,255,.6)}
 .res b{display:block;margin-top:10px;font-weight:400;font-size:clamp(30px,3.2vw,46px);letter-spacing:-.045em;line-height:1}
@@ -200,14 +202,19 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 
 /* contato e rodapé */
 .foot{margin:10px;border-radius:34px;background:var(--navy);color:#fff;overflow:hidden;padding:clamp(52px,7vw,100px) 0 0}
-.ct-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(30px,6vw,100px);align-items:start}
+.f-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(30px,6vw,100px);align-items:start}
+.foot .kick{color:rgba(255,255,255,.55);margin-bottom:22px}
 .foot h2{font-weight:400;font-size:clamp(40px,6vw,92px);letter-spacing:-.055em;line-height:.96}
 .foot h2 em{font-style:normal;color:var(--lime)}
-.foot .tel{display:block;margin-top:clamp(26px,3.4vw,44px);font-size:clamp(30px,4.2vw,62px);letter-spacing:-.05em;line-height:1}
+.foot .lead{margin-top:22px;max-width:430px;color:rgba(255,255,255,.7);font-size:clamp(16px,1.4vw,19px);line-height:1.45}
+.foot .tel{display:block;margin-top:clamp(24px,3vw,40px);font-size:clamp(32px,4.4vw,66px);letter-spacing:-.05em;line-height:1;transition:color .2s}
 .foot .tel:hover{color:var(--lime)}
-.foot .ad{margin-top:18px;color:rgba(255,255,255,.66);font-size:16px;line-height:1.5;max-width:380px}
-.foot .ig{display:inline-flex;align-items:center;gap:10px;margin-top:20px;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:3px}
-.foot .ig:hover{color:var(--lime);border-color:var(--lime)}
+.pills{margin-top:clamp(22px,3vw,34px);display:flex;flex-wrap:wrap;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 20px;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-size:15.5px;transition:background .25s,color .25s,border-color .25s}
+.pill .ic{font-size:19px}
+.pill:hover{background:var(--lime);border-color:var(--lime);color:var(--navy)}
+.pill.main{background:var(--lime);border-color:var(--lime);color:var(--navy)}
+.pill.main:hover{background:#fff;border-color:#fff}
 .foot form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:clamp(20px,2.4vw,32px);display:grid;gap:12px}
 .foot label{display:block}
 .foot label span{display:block;margin-bottom:7px;color:rgba(255,255,255,.58)}
@@ -218,13 +225,66 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .foot input::placeholder{color:rgba(255,255,255,.38)}
 .foot .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .foot form .btn{margin-top:6px;height:60px;width:100%;justify-content:space-between;padding-left:28px;font-size:17px}
-.fach{margin-top:clamp(40px,5vw,70px);display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;max-width:470px}
-.fach img{width:150px;height:150px;object-fit:cover;border-radius:22px}
-.fach p{color:rgba(255,255,255,.7);font-size:15px;line-height:1.45}
-.fach b{display:block;color:#fff;font-weight:500;font-size:17px;margin-bottom:4px;letter-spacing:-.02em}
-.wm{margin-top:clamp(30px,4vw,60px);font-weight:600;font-size:10.6vw;line-height:1.12;letter-spacing:-.06em;white-space:nowrap;text-align:center;text-transform:uppercase;color:#fff;user-select:none}
-.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 0 26px;color:rgba(255,255,255,.5);font-size:13px;border-top:1px solid rgba(255,255,255,.1);margin-top:10px}
-.legal.after{margin-top:0}
+.f-mid{margin-top:clamp(56px,7vw,96px);padding-top:clamp(28px,3vw,44px);border-top:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:1.2fr .7fr .85fr 1.05fr;gap:clamp(24px,3.4vw,56px)}
+.f-mid h3{font-weight:400;color:rgba(255,255,255,.5);margin-bottom:18px}
+.f-mid ul{list-style:none;display:grid;gap:11px;font-size:17px;letter-spacing:-.01em}
+.f-mid ul a{color:rgba(255,255,255,.88);transition:color .2s}
+.f-mid ul a:hover{color:var(--lime)}
+.f-brand .logo b{font-size:15px}
+.f-brand .logo svg{height:34px}
+.f-brand p{margin-top:20px;max-width:310px;color:rgba(255,255,255,.62);font-size:15.5px;line-height:1.5}
+.f-loja img{width:100%;aspect-ratio:16/11;object-fit:cover;border-radius:20px}
+.f-loja p{margin-top:14px;font-size:15px;line-height:1.5;color:rgba(255,255,255,.72)}
+.f-loja a{display:inline-flex;align-items:center;gap:6px;margin-top:8px;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px;transition:.2s}
+.f-loja a:hover{color:var(--lime);border-color:var(--lime)}
+.wm{margin-top:clamp(40px,5vw,72px);font-weight:600;font-size:10.6vw;line-height:1.12;letter-spacing:-.06em;white-space:nowrap;text-align:center;text-transform:uppercase;color:#fff;user-select:none}
+.legal{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px 0 26px;color:rgba(255,255,255,.5);font-size:13px;border-top:1px solid rgba(255,255,255,.1);margin-top:10px}
+.legal .up{display:inline-flex;align-items:center;gap:10px;color:#fff}
+.legal .up i{font-style:normal;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:grid;place-items:center;transition:.25s}
+.legal .up:hover i{background:var(--lime);border-color:var(--lime);color:var(--navy)}
+
+/* faixa de obras */
+.marq{padding:30px 0 0;overflow:hidden}
+.marq>p{text-align:center;color:var(--gray);margin-bottom:18px}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.mq-t{display:flex;width:max-content;animation:mq 46s linear infinite}
+.mq:hover .mq-t{animation-play-state:paused}
+@keyframes mq{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.mg{display:flex;gap:14px;padding-right:14px}
+.mi{display:flex;align-items:center;gap:14px;padding:8px 26px 8px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);white-space:nowrap}
+.mi img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.mi b{display:block;font-weight:500;font-size:18px;letter-spacing:-.025em;line-height:1.1}
+.mi small{display:block;margin-top:3px;color:var(--gray);font-size:13px}
+@media (prefers-reduced-motion:reduce){.mq-t{animation:none}.mq{overflow-x:auto}}
+
+/* mapa */
+.mapa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.mp-card{position:relative;border-radius:var(--r);background:var(--navy);background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1.4px);background-size:22px 22px;aspect-ratio:1/1;overflow:hidden;color:#fff}
+.mp{position:absolute;inset:0;width:100%;height:100%}
+.mp .rs{fill:rgba(255,255,255,.07);stroke:rgba(255,255,255,.38);stroke-width:1.3;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.pin{cursor:pointer;outline:none}
+.pin .pr{fill:none;stroke:var(--lime);stroke-width:1.2;opacity:.5;transform-box:fill-box;transform-origin:center;animation:pul 2.8s ease-out infinite}
+.pin .pc{fill:var(--lime);transition:transform .3s;transform-box:fill-box;transform-origin:center}
+.pin .pn{font:500 15px 'Inter Tight',sans-serif;fill:var(--navy);pointer-events:none}
+.pin .pl{font:400 13px 'DM Mono',monospace;letter-spacing:.06em;fill:rgba(255,255,255,.88);text-transform:uppercase;pointer-events:none}
+.pin:hover .pc,.pin.on .pc,.pin:focus-visible .pc{transform:scale(1.22)}
+.pin:hover .pr,.pin.on .pr{opacity:1}
+@keyframes pul{0%{transform:scale(.8);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+.inset{position:absolute;left:20px;top:20px;width:112px;color:rgba(255,255,255,.6)}
+.inset svg{width:112px;height:112px;display:block}
+.inset .br{fill:rgba(255,255,255,.1);stroke:rgba(255,255,255,.4);stroke-width:.7}
+.inset .rsi{fill:var(--lime)}
+.inset span{display:block;margin-top:4px}
+.mp-n{position:absolute;left:22px;bottom:18px;color:rgba(255,255,255,.55)}
+.mp-l{list-style:none;margin-top:clamp(26px,3.6vw,48px);border-bottom:1px solid var(--line)}
+.mp-l li{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:16px;align-items:center;padding:12px 0;border-top:1px solid var(--line);transition:opacity .3s,background .3s}
+.mp-l img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.mp-l b{font-weight:400;font-size:clamp(20px,2vw,28px);letter-spacing:-.04em}
+.mp-l .ct{font-size:clamp(22px,2.2vw,32px);letter-spacing:-.04em}
+.mp-l .ct small{font-size:14px;letter-spacing:0;color:var(--gray);margin-left:4px}
+.mp-l li.on{background:linear-gradient(90deg,rgba(213,242,60,.28),transparent)}
+@media (prefers-reduced-motion:reduce){.pin .pr{animation:none}}
+@media (max-width:1060px){.mapa{grid-template-columns:1fr}.mp-card{max-width:560px}}
 
 /* revelar */
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
@@ -241,7 +301,9 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   .bento{grid-template-columns:1fr 1fr}
   .b1{grid-row:auto;grid-column:span 2}
   .b4{grid-column:span 2}
-  .sim,.ct-g{grid-template-columns:1fr}
+  .sim,.f-top{grid-template-columns:1fr}
+  .f-mid{grid-template-columns:1fr 1fr}
+  .f-brand{grid-column:1/-1}
   .svc li{grid-template-columns:42px minmax(0,1fr) 44px}
   .svc p{grid-column:2/3;grid-row:2}
   .svc .ar{grid-row:1/3;grid-column:3}
@@ -263,8 +325,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   .b4{flex-direction:row}
   .res{grid-template-columns:1fr 1fr}
   .foot .r2{grid-template-columns:1fr}
-  .fach{grid-template-columns:110px 1fr}
-  .fach img{width:110px;height:110px}
+  .f-mid{row-gap:36px}
+  .f-loja{grid-column:1/-1}
   .obras,.foot{margin:6px;border-radius:26px}
   .wm{font-size:11.6vw}
   .faq p{padding-right:0}
@@ -312,6 +374,11 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
     <span class="lb c mono" id="lbC">Agora</span>
     <span class="lb r mono" id="lbR">Pôr</span>
   </div>
+</section>
+
+<section class="marq" aria-label="Obras entregues">
+  <p class="mono">Obras entregues em Novo Hamburgo e região</p>
+  <div class="mq"><div class="mq-t"><div class="mg"><span class="mi"><img src="img/ev-galpao-13000.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>13.000 kWh/mês</small></span></span><span class="mi"><img src="img/nb-rural-7500.webp" width="112" height="112" alt="" loading="lazy"><span><b>Nova Bréscia</b><small>7.500 kWh/mês</small></span></span><span class="mi"><img src="img/torres-700.webp" width="112" height="112" alt="" loading="lazy"><span><b>Torres</b><small>700 kWh/mês</small></span></span><span class="mi"><img src="img/nh-6kwp.webp" width="112" height="112" alt="" loading="lazy"><span><b>Novo Hamburgo</b><small>6,0 kWp</small></span></span><span class="mi"><img src="img/ev-galpao-7000a.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>7.000 kWh/mês</small></span></span><span class="mi"><img src="img/nhartz-53kwp.webp" width="112" height="112" alt="" loading="lazy"><span><b>Nova Hartz</b><small>5,3 kWp</small></span></span><span class="mi"><img src="img/ev-galpao-7000b.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>7.000 kWh/mês</small></span></span><span class="mi"><img src="img/ev-telhado-53kwp.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>5,3 kWp</small></span></span></div><div class="mg" aria-hidden="true"><span class="mi"><img src="img/ev-galpao-13000.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>13.000 kWh/mês</small></span></span><span class="mi"><img src="img/nb-rural-7500.webp" width="112" height="112" alt="" loading="lazy"><span><b>Nova Bréscia</b><small>7.500 kWh/mês</small></span></span><span class="mi"><img src="img/torres-700.webp" width="112" height="112" alt="" loading="lazy"><span><b>Torres</b><small>700 kWh/mês</small></span></span><span class="mi"><img src="img/nh-6kwp.webp" width="112" height="112" alt="" loading="lazy"><span><b>Novo Hamburgo</b><small>6,0 kWp</small></span></span><span class="mi"><img src="img/ev-galpao-7000a.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>7.000 kWh/mês</small></span></span><span class="mi"><img src="img/nhartz-53kwp.webp" width="112" height="112" alt="" loading="lazy"><span><b>Nova Hartz</b><small>5,3 kWp</small></span></span><span class="mi"><img src="img/ev-galpao-7000b.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>7.000 kWh/mês</small></span></span><span class="mi"><img src="img/ev-telhado-53kwp.webp" width="112" height="112" alt="" loading="lazy"><span><b>Estância Velha</b><small>5,3 kWp</small></span></span></div></div></div>
 </section>
 
 <section class="stats">
@@ -368,6 +435,24 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   </div>
 </section>
 
+<section class="sec" id="mapa">
+  <div class="wrap mapa">
+    <div class="mp-card rv">
+      <svg class="mp" viewBox="0 0 600 600" role="img" aria-label="Mapa do Rio Grande do Sul com as obras da Geração: Vale do Sinos, Nova Bréscia, Torres e Imbé">
+        <path class="rs" transform="translate(-227.0 -138.0) scale(1.3)" d="M281.4 411.4L283.2 412.0L284.8 414.3L287.4 414.7L288.5 418.6L290.3 419.8L293.8 420.3L295.2 421.8L294.0 423.0L295.7 425.9L295.3 427.2L298.3 431.9L298.2 433.4L300.3 436.5L301.0 440.3L300.3 442.5L304.0 447.3L307.9 449.8L311.1 449.4L313.2 454.3L316.2 457.1L317.4 455.9L322.4 459.6L325.1 458.5L325.7 460.2L330.0 461.5L332.4 460.8L335.2 462.1L336.5 459.3L339.2 459.0L340.6 457.4L341.5 451.1L342.4 450.1L347.1 448.0L352.8 447.0L355.0 445.5L357.7 442.2L354.7 440.2L353.5 442.0L351.6 438.8L354.3 432.9L354.4 431.3L356.8 428.6L357.1 426.2L360.7 426.5L364.0 425.2L360.2 434.4L359.9 437.8L362.9 443.1L365.2 448.0L366.2 453.5L364.1 460.8L359.9 469.4L357.3 475.9L354.8 479.2L350.9 480.8L346.2 478.8L342.7 475.5L340.3 472.3L340.3 470.0L336.1 474.9L331.3 473.9L330.7 476.8L330.8 483.6L329.6 487.2L323.1 494.9L319.4 492.9L315.3 498.4L313.5 498.7L311.2 505.4L311.3 507.2L314.0 518.6L313.1 524.3L311.4 527.3L308.6 526.3L308.5 530.5L307.1 534.0L307.8 536.8L313.0 537.1L314.1 540.7L317.4 540.7L323.9 535.5L330.7 529.6L335.1 525.3L354.4 507.4L359.9 500.6L363.9 494.5L371.9 477.4L373.9 471.6L376.4 460.1L378.7 452.7L381.5 445.4L384.5 439.1L388.2 433.5L395.0 426.9L396.7 426.4L396.6 420.6L393.0 421.6L394.1 418.0L390.7 418.8L390.6 416.7L395.7 415.3L395.7 413.1L391.1 413.4L388.6 417.3L387.7 414.1L391.1 412.0L394.1 408.8L391.8 408.0L389.1 405.5L388.8 399.4L388.7 396.7L393.3 392.9L396.3 391.9L400.9 392.4L401.9 385.5L401.7 382.0L402.2 378.6L403.2 372.3L405.3 367.9L407.8 364.8L410.6 364.7L412.5 365.7L414.5 363.0L417.9 363.1L421.1 361.6L425.3 361.9L425.2 355.9L425.9 353.4L427.6 351.9L431.6 350.7L437.4 348.8L435.0 344.6L433.9 339.9L434.1 336.4L437.2 333.1L440.8 333.7L439.9 326.7L440.1 321.9L441.4 316.6L444.3 315.9L445.3 316.8L445.5 321.1L446.9 321.2L446.3 315.9L446.5 310.5L448.6 304.8L451.2 300.4L452.8 299.6L455.5 300.0L457.5 298.8L457.1 296.1L454.0 298.0L452.2 294.7L450.2 293.1L446.7 292.0L446.5 287.5L444.7 286.5L445.0 282.6L446.4 274.0L448.2 272.9L450.6 273.5L449.0 279.0L451.0 280.5L450.9 282.9L457.1 288.0L460.4 287.7L461.2 288.9L463.7 290.6L463.6 293.0L462.2 297.7L466.8 299.6L469.5 301.6L469.0 297.2L470.5 293.7L474.9 293.3L477.8 294.5L478.7 290.7L480.7 291.5L485.5 291.5L486.4 284.5L488.8 284.4L490.2 284.3L491.6 287.3L493.7 288.3L492.9 293.0L493.5 295.8L492.2 298.1L491.7 304.9L489.4 305.2L487.0 302.9L486.7 300.3L490.3 298.4L488.9 296.2L487.4 298.7L483.5 295.2L482.0 296.7L483.8 300.8L484.7 306.3L485.1 314.1L484.5 321.2L482.5 326.5L480.5 329.3L476.6 330.9L472.5 334.5L470.2 335.6L467.1 335.0L468.2 339.4L468.0 342.6L465.5 345.9L462.1 346.8L458.7 349.6L454.1 348.1L454.0 352.1L455.0 356.6L455.3 363.0L454.0 368.8L450.3 375.4L447.5 378.3L442.6 380.8L440.2 380.0L438.4 377.9L436.8 380.6L436.3 383.4L434.1 384.5L431.0 389.4L426.9 395.1L424.1 397.8L419.3 399.4L415.1 399.4L414.6 403.4L411.5 405.3L407.6 404.8L402.3 401.5L398.6 401.5L396.7 402.8L397.9 405.2L401.8 409.1L402.5 411.2L399.4 413.6L400.4 416.8L399.7 420.2L397.2 424.2L398.0 425.0L407.7 413.8L413.3 408.8L418.5 405.3L426.2 400.9L433.8 396.1L438.5 392.7L448.5 384.2L453.5 378.8L462.6 368.4L472.7 358.8L475.0 356.1L479.7 350.3L485.8 339.7L492.7 329.2L498.5 319.3L504.2 310.8L506.6 306.3L508.4 302.4L511.8 292.1L513.5 287.2L516.9 277.1L520.1 268.4L522.8 261.7L523.5 260.0L526.4 253.6L531.6 243.0L532.3 241.7L539.7 229.9L545.4 221.3L543.6 219.4L540.5 218.4L539.0 218.5L536.4 214.6L533.6 213.4L530.1 212.2L526.9 214.1L520.3 216.8L525.4 223.1L524.9 223.5L520.5 219.8L518.5 217.3L518.4 212.1L520.8 213.1L526.4 209.6L530.1 202.7L529.6 199.4L531.6 195.3L530.3 194.1L530.5 190.1L529.9 187.2L529.9 181.3L535.6 176.2L537.5 177.1L537.5 173.7L542.7 170.0L545.9 171.1L546.0 171.0L545.7 167.6L543.3 164.2L543.2 161.2L540.5 161.4L538.9 159.4L537.5 161.4L533.7 159.1L529.3 157.3L525.8 159.8L523.2 160.2L521.4 160.5L518.3 158.0L512.4 156.7L510.5 158.6L508.7 157.3L506.3 157.4L504.5 156.0L501.0 156.8L498.2 155.5L494.3 155.0L493.6 156.4L490.5 153.1L486.0 149.9L486.0 148.1L484.1 145.0L480.8 143.5L480.0 139.6L478.0 135.5L473.9 135.6L472.9 132.4L471.4 132.0L472.9 128.5L469.9 126.4L469.9 123.5L466.5 121.8L465.0 122.9L463.9 119.9L461.6 117.3L461.8 116.0L456.7 111.3L453.4 109.4L448.2 107.6L448.1 106.4L445.9 105.2L445.5 102.0L442.7 102.3L441.6 100.9L439.0 100.5L436.6 97.1L435.0 93.9L431.0 93.6L429.1 94.9L427.2 92.4L425.7 88.5L424.8 90.5L421.4 87.9L420.4 90.2L418.3 88.5L416.0 90.4L412.9 91.0L411.6 87.6L408.9 88.7L406.8 84.2L404.7 82.9L403.8 80.3L399.7 78.3L396.1 78.0L394.9 75.1L388.8 77.1L386.1 73.7L386.5 71.8L383.7 72.4L384.1 76.3L380.8 74.1L378.0 74.4L376.7 73.6L375.2 71.3L375.8 69.0L372.9 70.2L372.9 72.4L369.4 72.0L368.8 70.6L364.3 72.4L360.6 71.0L359.7 73.8L358.3 70.4L355.2 71.2L355.4 68.6L353.8 68.1L352.8 67.9L350.1 68.2L349.7 65.5L344.8 68.0L343.1 65.0L342.2 69.0L340.4 68.2L341.4 65.5L340.9 63.3L338.8 64.7L337.9 62.3L339.3 60.0L337.4 59.3L335.7 61.0L336.0 64.6L331.7 65.9L329.9 63.6L328.7 67.1L326.0 65.6L320.3 68.4L322.0 62.8L318.3 61.3L316.7 60.0L315.1 63.1L312.0 64.6L310.7 63.3L308.8 64.2L310.0 67.2L308.1 67.8L306.3 66.0L303.0 66.9L301.1 68.6L299.8 66.0L297.7 65.0L295.7 66.4L293.6 66.8L292.1 63.9L289.3 65.9L288.2 65.4L286.6 62.3L284.5 65.5L281.4 64.2L280.6 67.3L277.6 67.6L276.4 71.6L274.7 72.3L273.0 74.8L271.1 75.1L268.4 74.7L266.0 75.5L264.5 81.1L261.4 82.4L260.4 85.6L256.8 82.5L257.2 85.8L255.8 86.8L253.2 83.0L248.7 84.6L250.4 86.5L248.5 88.0L246.9 87.9L245.4 89.8L242.3 86.0L239.7 91.7L238.7 92.7L235.7 91.3L236.2 94.2L233.0 94.0L229.2 95.1L228.5 91.9L227.1 91.9L225.7 97.0L224.4 98.7L221.8 99.2L221.8 103.7L221.6 106.0L218.9 109.6L215.8 110.4L214.2 110.6L212.1 108.7L210.6 110.8L214.2 113.6L212.5 114.8L210.1 114.2L207.9 115.4L207.1 117.9L205.0 115.5L203.1 115.2L200.1 119.3L198.4 120.7L195.3 120.2L194.6 123.1L191.6 124.5L192.3 128.0L189.9 129.5L188.4 131.7L185.3 131.0L182.7 133.9L180.6 137.3L177.7 134.0L176.2 138.4L172.6 141.3L167.7 143.0L167.5 145.3L169.4 145.9L173.3 148.8L174.0 150.1L172.6 155.6L170.9 155.8L170.0 153.1L168.6 152.2L161.4 151.3L159.6 154.3L160.6 160.2L154.1 161.5L151.9 163.3L153.2 167.3L152.3 169.8L150.4 170.6L146.0 174.8L141.3 181.5L137.1 181.8L134.7 183.9L134.7 190.3L133.2 192.4L129.8 194.0L127.4 197.8L128.5 199.1L126.6 203.5L122.0 204.2L119.1 206.2L116.7 206.5L114.9 210.2L113.1 212.3L112.9 216.2L112.0 219.1L108.9 224.4L106.1 224.6L104.8 228.2L102.1 233.2L97.2 236.4L93.0 241.3L92.8 244.3L91.0 244.9L89.7 247.2L82.8 253.5L80.3 254.2L76.4 254.2L72.5 258.1L70.5 262.0L70.6 268.1L69.1 270.7L66.3 271.7L62.7 276.0L62.1 278.1L58.3 281.0L54.0 283.0L56.3 285.5L55.6 288.3L56.7 289.8L59.8 291.0L60.5 289.5L64.3 289.9L64.9 292.0L69.1 290.7L71.6 288.7L73.3 291.3L78.3 290.7L80.6 288.0L80.6 284.3L83.9 278.3L86.2 276.7L88.2 277.7L89.6 276.4L93.8 277.4L100.4 276.5L104.7 279.2L104.5 281.0L107.9 282.5L110.0 284.9L112.4 284.6L116.2 291.4L119.9 294.2L122.8 298.9L124.6 297.9L126.0 301.4L128.6 302.5L129.3 305.9L135.3 308.6L136.1 310.6L138.6 311.5L140.0 314.1L141.7 313.8L143.1 316.6L144.0 321.1L146.7 323.0L147.4 324.6L151.9 326.9L154.0 332.2L152.7 336.0L152.2 345.5L153.1 348.3L154.7 347.7L161.4 347.6L165.4 343.6L167.1 343.6L171.8 339.1L174.2 339.1L175.7 336.0L174.4 333.1L176.0 331.3L179.6 330.8L181.7 334.5L183.9 335.3L185.9 339.0L187.2 338.9L189.3 341.3L188.5 342.7L192.6 344.1L193.4 346.9L195.3 348.8L194.6 352.0L197.7 352.9L200.1 357.3L200.4 360.6L204.9 361.8L206.2 363.6L211.1 366.4L213.5 362.9L215.6 361.8L216.8 364.9L218.4 365.8L219.9 370.2L222.0 369.6L225.9 374.3L232.0 373.1L234.4 373.9L236.3 375.2L241.5 375.4L242.1 377.1L245.9 379.3L248.6 383.6L249.7 389.6L273.0 409.6L275.7 407.2L280.4 409.0L281.4 411.4Z"/>
+        <g class="pin" data-k="vale" transform="translate(367.1 182.9)" tabindex="0"><circle class="pr" r="20"/><circle class="pc" r="15"/><text class="pn" y="5.2" text-anchor="middle">9</text><text class="pl" x="-28" y="5" text-anchor="end">Vale do Sinos</text></g><g class="pin" data-k="nb" transform="translate(294.1 139.8)" tabindex="0"><circle class="pr" r="20"/><circle class="pc" r="15"/><text class="pn" y="5.2" text-anchor="middle">1</text><text class="pl" x="-28" y="5" text-anchor="end">Nova Bréscia</text></g><g class="pin" data-k="torres" transform="translate(480.9 150.6)" tabindex="0"><circle class="pr" r="20"/><circle class="pc" r="15"/><text class="pn" y="5.2" text-anchor="middle">2</text><text class="pl" x="0" y="-32" text-anchor="middle">Torres</text></g><g class="pin" data-k="imbe" transform="translate(448.3 210.7)" tabindex="0"><circle class="pr" r="20"/><circle class="pc" r="15"/><text class="pn" y="5.2" text-anchor="middle">1</text><text class="pl" x="0" y="40" text-anchor="middle">Imbé</text></g>
+      </svg>
+      <div class="inset"><svg viewBox="0 0 130 130" aria-hidden="true"><path class="br" d="M40.8 61.5L41.7 61.6L42.6 62.8L44.3 62.7L45.3 62.8L45.9 63.3L46.6 63.6L46.9 64.2L46.7 65.2L47.2 66.2L47.3 67.7L46.3 67.7L47.3 68.9L47.5 71.4L49.7 71.4L51.7 71.5L53.1 71.3L52.7 73.4L52.9 74.2L54.1 75.3L54.9 75.4L55.4 77.5L54.8 80.0L53.7 82.3L54.5 82.9L53.6 83.5L54.6 86.0L54.5 88.3L54.1 89.6L55.6 89.8L57.0 90.0L57.6 90.2L59.0 89.5L59.1 89.8L60.6 90.2L60.9 90.5L61.3 91.4L61.2 91.9L61.5 93.2L61.5 93.9L61.8 95.3L62.4 95.5L64.1 95.0L64.9 95.3L65.3 95.7L65.4 96.7L65.3 96.9L65.2 97.4L65.2 97.6L65.2 97.7L64.8 98.8L64.8 99.3L64.3 100.1L64.8 100.7L65.3 100.4L65.8 100.3L66.2 100.5L66.6 100.8L66.7 101.1L66.7 101.5L67.0 101.9L67.2 102.3L67.2 102.4L67.3 102.6L67.1 103.1L67.1 103.2L67.0 103.5L67.0 103.7L67.0 104.1L67.2 104.4L67.2 104.6L67.2 104.7L67.0 104.9L66.7 105.4L66.0 105.7L65.9 105.9L65.5 106.1L65.3 106.3L64.8 106.4L64.3 106.6L64.0 106.7L63.5 107.1L63.2 107.4L63.0 107.6L62.3 107.8L62.1 107.9L62.0 108.1L61.8 108.3L60.8 108.8L61.1 109.3L60.5 109.5L59.2 110.9L58.4 111.5L57.8 112.5L56.4 113.6L56.1 114.2L55.3 114.9L56.5 115.2L56.8 114.6L58.2 114.9L59.3 116.0L60.1 116.8L60.1 117.7L61.4 116.9L62.4 118.2L63.1 118.3L64.1 118.8L64.8 119.5L66.3 120.4L67.0 120.9L67.2 121.3L67.3 121.8L68.7 122.6L69.3 122.1L70.3 121.0L70.4 122.5L69.7 123.4L68.8 123.0L68.7 123.7L67.8 124.5L67.6 125.8L67.9 126.0L69.9 124.6L71.0 122.5L71.9 121.1L71.6 119.9L72.2 119.3L72.2 119.0L72.8 118.3L73.6 117.8L73.9 117.0L74.4 115.8L74.3 115.0L74.3 114.5L74.4 114.4L75.1 115.1L75.1 115.5L76.4 114.9L76.6 115.1L76.2 115.9L76.0 116.9L74.7 117.8L74.5 118.9L74.0 119.0L73.3 119.8L72.2 120.3L72.0 121.0L72.7 120.3L74.7 119.0L75.7 118.0L77.3 115.9L77.5 115.2L77.6 115.0L77.8 114.6L77.9 114.2L78.0 113.9L78.1 113.9L78.2 113.6L78.5 113.1L78.5 113.1L78.9 112.6L79.1 112.2L79.3 111.9L79.7 111.5L80.2 111.0L80.4 110.8L80.7 110.5L81.7 110.0L82.2 109.1L82.4 108.4L82.4 107.9L82.5 107.7L82.6 107.6L83.2 106.3L82.7 106.2L82.5 105.9L82.5 105.6L82.6 105.6L82.8 105.3L82.5 105.4L82.5 105.1L82.4 104.8L82.4 104.6L82.4 104.4L82.3 104.2L82.2 104.0L82.3 103.6L82.3 103.5L82.5 103.2L82.6 102.3L82.5 101.7L82.6 101.3L82.9 100.9L83.2 100.5L83.4 100.2L84.0 99.6L84.6 98.8L86.1 97.6L87.1 96.9L87.6 96.3L88.2 96.0L88.5 95.8L89.2 95.5L89.3 95.4L89.4 95.5L89.9 95.1L90.8 94.8L92.2 94.9L92.1 94.6L92.5 94.2L93.6 93.4L94.2 93.6L94.8 92.5L95.9 92.5L96.8 92.1L97.0 92.1L97.7 92.6L98.5 92.5L98.6 91.8L98.8 91.6L99.3 91.4L99.3 91.5L99.3 91.6L99.1 92.0L99.4 92.3L100.5 92.2L101.3 92.2L101.6 92.2L102.3 92.2L102.5 91.9L102.5 91.6L102.5 91.1L102.5 91.0L103.0 90.6L103.4 90.2L103.8 90.0L105.0 89.6L105.5 89.0L105.3 88.1L105.6 87.1L105.7 86.7L106.0 86.1L106.2 85.7L106.4 85.6L106.7 85.4L107.3 84.7L107.6 84.0L107.8 83.8L107.9 83.2L108.0 83.1L108.7 82.0L109.4 80.9L109.3 80.2L109.2 79.0L109.5 77.8L110.0 76.8L110.7 76.2L111.1 75.8L110.9 75.0L111.1 73.3L111.5 71.6L111.6 70.8L111.8 69.8L111.6 68.6L111.5 67.7L111.4 65.9L111.4 65.6L111.5 64.9L111.6 63.9L111.6 63.8L111.6 63.8L111.5 63.4L111.6 63.2L111.6 62.4L111.7 61.8L112.1 61.6L112.7 61.2L113.6 60.9L113.7 60.8L114.4 59.9L114.8 59.3L115.2 58.8L115.5 58.3L116.0 57.2L116.5 56.3L116.7 55.8L117.1 55.4L117.4 54.7L118.0 54.1L118.5 53.7L119.1 53.4L119.4 53.3L119.6 52.8L119.8 52.6L120.5 51.9L120.7 51.6L120.8 51.3L121.0 51.1L121.2 50.9L121.9 50.2L122.0 50.0L122.1 49.7L122.4 49.5L122.6 49.3L122.7 49.1L122.8 48.8L123.1 48.4L123.2 48.2L123.3 48.0L123.3 47.7L123.4 47.4L123.7 46.6L123.8 46.2L123.9 46.0L124.0 45.6L124.1 45.4L124.1 45.0L124.0 44.9L124.0 44.5L124.1 44.1L124.2 43.6L124.2 43.1L124.1 42.5L124.0 42.5L124.0 42.3L123.9 42.0L123.8 41.6L123.8 41.5L123.7 41.1L123.7 40.8L123.5 40.2L123.5 40.1L123.3 39.8L123.3 39.7L123.2 39.2L123.1 38.9L123.0 38.4L122.9 38.0L122.8 37.7L122.6 37.3L122.4 37.0L121.7 36.5L121.2 36.4L120.8 36.3L120.4 36.3L120.3 36.4L119.6 36.4L119.3 36.4L118.4 36.4L118.0 36.0L117.1 36.0L116.9 35.7L116.8 35.6L115.9 35.0L115.2 34.3L115.0 34.2L114.1 33.3L113.8 33.0L113.3 32.4L112.7 32.0L112.1 31.6L111.7 31.3L111.3 31.1L111.0 30.9L110.3 30.4L109.8 30.1L109.3 29.9L108.6 29.4L107.3 29.3L107.1 29.3L106.7 29.4L105.1 29.6L104.5 29.6L104.1 29.6L103.5 29.4L103.1 29.1L103.0 29.1L101.8 28.9L101.0 28.9L100.5 28.7L99.4 28.2L98.3 27.8L98.0 28.3L97.3 28.3L97.2 28.1L97.1 28.0L96.2 29.1L95.9 29.1L95.6 29.1L95.9 28.9L96.1 28.5L96.3 28.5L96.2 28.2L95.9 28.2L95.8 28.2L95.7 28.2L95.2 29.2L94.9 29.9L94.7 30.0L94.6 30.0L94.4 29.9L94.4 29.5L94.4 29.3L94.7 28.6L95.3 27.8L95.0 27.2L94.4 27.7L94.3 27.6L94.6 26.8L94.7 26.4L94.5 26.0L93.8 25.5L93.7 25.5L93.5 25.4L92.8 25.1L92.4 25.5L92.4 24.7L91.9 25.1L91.5 24.5L91.0 24.2L91.0 24.2L91.0 24.2L90.8 24.3L90.4 23.8L90.0 24.2L89.7 23.3L89.3 23.7L88.4 23.5L87.9 23.2L87.5 23.2L87.1 23.0L86.5 22.5L86.0 22.5L85.5 22.7L85.4 22.7L85.0 22.4L84.4 22.6L83.9 22.8L83.8 23.0L83.1 23.3L82.8 22.8L83.0 21.2L81.5 21.2L80.8 20.9L80.1 21.1L80.1 20.3L79.2 20.0L79.6 19.2L77.8 19.4L78.2 18.8L77.6 18.3L78.6 17.3L78.6 16.6L78.5 15.2L77.8 14.8L77.0 14.8L76.2 13.8L75.4 11.6L74.9 9.7L74.8 8.2L74.6 7.5L73.3 6.4L73.3 7.8L72.3 8.9L71.2 10.9L70.6 12.6L69.5 13.6L68.4 13.6L66.9 13.3L65.6 13.7L64.9 13.6L63.6 12.9L63.3 12.4L61.0 13.0L61.0 13.0L60.3 12.6L59.7 13.4L60.4 14.6L60.1 14.8L58.8 14.4L57.8 14.7L56.9 14.1L55.8 14.5L55.4 15.2L54.1 15.3L54.1 15.8L53.1 15.6L52.6 15.9L52.6 16.5L51.4 16.6L49.8 15.6L49.0 15.0L48.9 14.2L48.1 12.1L48.4 9.3L49.5 8.2L48.9 7.5L48.9 6.7L47.6 6.4L48.0 5.8L48.1 4.6L47.4 4.0L46.0 4.1L46.1 5.2L45.1 6.4L44.2 6.3L43.5 7.0L41.6 7.7L40.8 7.4L39.8 7.9L39.8 8.6L39.0 9.2L38.4 8.1L37.5 8.5L37.0 7.9L36.1 8.4L35.5 7.6L34.3 7.7L33.5 7.4L35.4 9.6L35.3 10.8L35.9 11.7L36.1 12.8L37.9 13.0L37.9 13.6L36.5 14.3L35.8 14.4L35.8 15.2L34.8 16.1L34.8 15.7L33.7 16.6L33.5 16.5L32.5 17.5L32.0 17.6L31.6 18.3L31.2 17.3L30.0 18.0L29.0 18.2L27.4 16.6L26.7 16.8L26.6 15.1L26.1 14.6L25.7 13.5L24.1 14.8L23.5 14.3L23.4 15.1L18.3 15.1L18.3 17.1L19.9 17.1L20.5 17.7L20.5 18.5L17.7 18.7L17.7 20.3L17.7 21.1L19.0 22.1L19.0 22.8L19.6 23.6L19.6 24.8L19.0 28.1L18.4 32.0L18.0 33.8L17.5 33.9L17.0 33.5L15.6 33.5L15.0 34.2L14.0 34.2L13.0 34.6L12.5 34.5L9.1 36.6L8.9 38.2L8.0 39.7L8.5 40.5L8.2 41.1L6.9 41.6L6.4 42.7L6.7 43.3L5.8 44.1L6.7 44.8L6.9 45.7L7.2 46.6L7.8 47.0L8.4 47.9L9.0 48.8L8.2 49.9L9.6 49.9L10.8 50.2L11.4 51.1L11.3 51.8L13.7 51.8L14.6 51.2L16.1 50.0L16.3 50.9L16.0 52.0L16.0 53.1L16.0 54.0L16.0 54.9L17.4 55.0L18.1 54.6L19.6 54.7L21.6 54.9L21.7 55.3L22.7 55.0L23.9 53.8L24.8 53.9L25.2 53.3L26.9 52.5L28.0 51.4L30.0 51.2L31.3 51.2L31.6 50.7L32.0 51.6L32.1 52.4L31.8 53.1L31.9 54.3L32.2 54.8L31.9 55.3L32.3 57.2L32.7 57.1L32.9 58.0L33.4 58.0L34.2 58.7L34.8 59.4L36.1 59.7L36.9 59.4L38.1 60.1L38.7 60.0L39.3 60.7L40.8 61.5ZM67.9 102.7L67.9 102.7L67.9 102.7L67.9 102.7ZM74.0 67.4L74.9 67.2L74.2 67.3L74.2 67.4L74.0 67.4ZM94.9 29.0L94.6 29.3L94.5 29.8L94.9 29.7L94.9 29.0ZM97.4 92.6L97.4 92.5L97.0 92.6L97.0 92.6L97.4 92.6ZM67.2 99.8L67.3 99.7L67.3 99.7L67.2 99.8ZM68.1 93.2L68.1 93.2L68.1 93.2L68.1 93.2Z"/><path class="rsi" d="M66.3 120.4L66.4 120.4L66.5 120.5L66.6 120.5L66.7 120.7L66.8 120.8L66.9 120.8L67.0 120.9L67.0 120.9L67.0 121.0L67.0 121.1L67.2 121.3L67.2 121.4L67.3 121.5L67.3 121.7L67.3 121.8L67.4 122.0L67.6 122.1L67.8 122.1L67.9 122.3L68.0 122.4L68.1 122.3L68.3 122.5L68.5 122.4L68.5 122.5L68.7 122.6L68.8 122.5L69.0 122.6L69.0 122.5L69.1 122.5L69.2 122.4L69.3 122.1L69.3 122.1L69.5 122.0L69.8 121.9L69.9 121.9L70.0 121.7L69.9 121.6L69.8 121.7L69.7 121.6L69.9 121.3L69.9 121.3L70.0 121.1L70.0 121.0L70.2 121.1L70.3 121.0L70.2 121.4L70.1 121.5L70.3 121.8L70.4 122.0L70.5 122.2L70.4 122.5L70.1 122.9L70.0 123.2L69.9 123.3L69.7 123.4L69.5 123.3L69.3 123.2L69.2 123.0L69.2 122.9L69.0 123.2L68.8 123.1L68.7 123.2L68.7 123.5L68.7 123.7L68.4 124.0L68.2 123.9L68.0 124.2L67.9 124.2L67.8 124.5L67.8 124.5L67.9 125.0L67.9 125.3L67.8 125.4L67.7 125.4L67.7 125.6L67.6 125.7L67.6 125.8L67.9 125.8L67.9 126.0L68.1 126.0L68.4 125.8L68.7 125.5L68.9 125.3L69.9 124.6L70.2 124.3L70.3 124.0L70.7 123.3L70.8 123.0L71.0 122.5L71.1 122.2L71.2 121.9L71.3 121.6L71.5 121.4L71.9 121.1L71.9 121.1L71.9 120.8L71.8 120.8L71.8 120.7L71.6 120.7L71.6 120.6L71.9 120.6L71.9 120.5L71.7 120.5L71.5 120.7L71.5 120.5L71.7 120.4L71.8 120.3L71.7 120.3L71.6 120.1L71.6 119.9L71.5 119.8L71.8 119.6L71.9 119.6L72.1 119.6L72.2 119.3L72.2 119.1L72.2 119.0L72.2 118.7L72.3 118.5L72.5 118.4L72.6 118.4L72.7 118.4L72.8 118.3L73.0 118.3L73.1 118.3L73.3 118.3L73.3 118.0L73.3 117.9L73.4 117.8L73.6 117.8L73.9 117.7L73.8 117.5L73.7 117.3L73.7 117.2L73.9 117.0L74.1 117.0L74.0 116.7L74.0 116.5L74.1 116.3L74.2 116.3L74.3 116.3L74.3 116.5L74.4 116.5L74.3 116.3L74.3 116.0L74.4 115.8L74.6 115.6L74.7 115.6L74.8 115.6L74.9 115.5L74.9 115.4L74.7 115.5L74.6 115.4L74.5 115.3L74.4 115.2L74.3 115.0L74.3 115.0L74.3 114.8L74.3 114.5L74.4 114.4L74.5 114.4L74.5 114.7L74.6 114.7L74.6 114.8L74.9 115.1L75.0 115.1L75.1 115.1L75.2 115.2L75.2 115.3L75.1 115.5L75.3 115.6L75.5 115.7L75.4 115.5L75.5 115.3L75.7 115.3L75.9 115.4L75.9 115.2L76.0 115.2L76.2 115.2L76.3 114.9L76.4 114.9L76.5 114.9L76.5 115.0L76.6 115.1L76.6 115.3L76.6 115.4L76.6 115.5L76.5 115.8L76.4 115.8L76.3 115.7L76.3 115.6L76.5 115.5L76.4 115.4L76.3 115.5L76.1 115.4L76.1 115.4L76.2 115.6L76.2 115.9L76.2 116.2L76.2 116.5L76.1 116.7L76.0 116.9L75.8 116.9L75.6 117.1L75.5 117.1L75.3 117.1L75.4 117.3L75.4 117.4L75.3 117.6L75.1 117.6L74.9 117.7L74.7 117.7L74.7 117.8L74.8 118.0L74.8 118.3L74.7 118.6L74.5 118.9L74.4 119.0L74.2 119.1L74.0 119.0L74.0 119.0L73.9 119.1L73.9 119.2L73.7 119.2L73.6 119.5L73.4 119.7L73.3 119.8L73.0 119.9L72.8 119.9L72.8 120.1L72.6 120.1L72.5 120.1L72.2 120.0L72.0 120.0L71.9 120.0L72.0 120.1L72.2 120.3L72.2 120.4L72.1 120.5L72.1 120.6L72.1 120.8L72.0 121.0L72.0 121.0L72.5 120.5L72.7 120.3L73.0 120.1L73.4 120.0L73.7 119.7L74.0 119.6L74.4 119.2L74.7 119.0L75.1 118.5L75.6 118.1L75.7 118.0L76.0 117.8L76.3 117.3L76.6 116.9L76.9 116.4L77.1 116.1L77.3 115.9L77.3 115.7L77.5 115.2L77.6 115.0L77.8 114.6L77.9 114.2L78.0 113.9L78.1 113.9L78.2 113.6L78.5 113.1L78.5 113.1L78.9 112.6L79.1 112.2L79.0 112.1L78.9 112.1L78.8 112.1L78.7 111.9L78.6 111.8L78.4 111.8L78.2 111.9L77.9 112.0L78.2 112.3L78.1 112.3L77.9 112.1L77.8 112.0L77.8 111.8L77.9 111.8L78.2 111.7L78.4 111.4L78.4 111.2L78.5 111.1L78.4 111.0L78.4 110.8L78.4 110.7L78.4 110.5L78.7 110.2L78.8 110.3L78.8 110.1L79.0 110.0L79.2 110.0L79.2 110.0L79.2 109.9L79.0 109.7L79.0 109.6L78.9 109.6L78.8 109.5L78.8 109.6L78.6 109.5L78.4 109.4L78.2 109.5L78.1 109.5L78.0 109.6L77.8 109.4L77.5 109.4L77.4 109.5L77.4 109.4L77.2 109.4L77.2 109.4L77.0 109.4L76.8 109.3L76.7 109.3L76.6 109.4L76.5 109.2L76.3 109.1L76.3 109.0L76.2 108.9L76.0 108.8L76.0 108.6L75.9 108.5L75.7 108.5L75.6 108.3L75.6 108.3L75.6 108.2L75.5 108.1L75.5 108.0L75.3 107.9L75.2 107.9L75.2 107.8L75.1 107.7L75.1 107.6L74.8 107.4L74.7 107.3L74.4 107.3L74.4 107.2L74.3 107.2L74.3 107.0L74.2 107.0L74.1 107.0L74.0 107.0L73.9 106.8L73.8 106.7L73.6 106.7L73.5 106.7L73.4 106.6L73.3 106.4L73.3 106.5L73.1 106.4L73.1 106.5L73.0 106.4L72.9 106.5L72.7 106.5L72.7 106.4L72.5 106.4L72.4 106.3L72.3 106.2L72.3 106.1L72.1 106.0L71.9 106.0L71.8 105.9L71.5 105.9L71.4 105.8L71.4 105.7L71.3 105.7L71.3 105.9L71.2 105.8L71.0 105.8L71.0 105.8L70.9 105.7L70.9 105.6L70.8 105.6L70.8 105.7L70.6 105.7L70.6 105.7L70.4 105.7L70.2 105.7L70.1 105.8L70.1 105.7L69.9 105.7L69.9 105.6L69.9 105.6L69.8 105.5L69.7 105.6L69.7 105.4L69.4 105.6L69.3 105.4L69.3 105.6L69.2 105.6L69.3 105.4L69.2 105.4L69.1 105.4L69.1 105.3L69.2 105.2L69.1 105.2L69.0 105.2L69.0 105.4L68.8 105.5L68.7 105.4L68.6 105.5L68.5 105.4L68.2 105.6L68.3 105.3L68.1 105.3L68.1 105.2L68.0 105.3L67.8 105.4L67.8 105.3L67.7 105.4L67.7 105.5L67.6 105.5L67.6 105.5L67.4 105.5L67.3 105.6L67.2 105.5L67.1 105.4L67.0 105.5L66.9 105.5L66.9 105.4L66.7 105.5L66.7 105.4L66.6 105.3L66.5 105.4L66.3 105.4L66.3 105.5L66.2 105.5L66.1 105.7L66.0 105.7L65.9 105.8L65.9 105.9L65.7 105.8L65.6 105.9L65.5 106.1L65.4 106.2L65.3 106.3L65.2 106.2L65.2 106.3L65.1 106.4L65.0 106.2L64.8 106.3L64.8 106.4L64.8 106.4L64.7 106.4L64.6 106.5L64.5 106.3L64.3 106.6L64.3 106.6L64.1 106.6L64.2 106.7L64.0 106.7L63.8 106.7L63.8 106.6L63.7 106.6L63.7 106.8L63.6 106.9L63.5 106.9L63.5 107.1L63.4 107.2L63.3 107.3L63.2 107.4L63.1 107.4L63.0 107.3L62.9 107.4L63.1 107.5L63.0 107.6L62.9 107.5L62.8 107.6L62.7 107.7L62.6 107.6L62.6 107.6L62.4 107.8L62.3 107.8L62.2 107.8L62.1 107.9L62.0 108.0L62.0 108.1L61.9 108.2L61.8 108.3L61.7 108.3L61.6 108.4L61.5 108.6L61.3 108.4L61.3 108.6L61.1 108.7L60.8 108.8L60.8 108.9L60.9 108.9L61.1 109.0L61.1 109.1L61.1 109.3L61.0 109.3L60.9 109.2L60.9 109.2L60.5 109.2L60.4 109.3L60.5 109.5L60.2 109.6L60.1 109.7L60.1 109.8L60.1 110.0L60.0 110.0L59.8 110.2L59.6 110.5L59.4 110.5L59.2 110.6L59.2 110.8L59.2 110.9L59.0 111.0L58.9 111.2L58.9 111.2L58.8 111.4L58.6 111.4L58.5 111.5L58.4 111.5L58.3 111.7L58.2 111.8L58.2 112.0L58.1 112.1L58.0 112.3L57.9 112.3L57.8 112.5L57.7 112.7L57.4 112.8L57.2 113.0L57.2 113.2L57.1 113.2L57.1 113.3L56.7 113.6L56.6 113.6L56.4 113.6L56.2 113.8L56.1 113.9L56.1 114.2L56.1 114.3L55.9 114.4L55.8 114.5L55.7 114.6L55.5 114.8L55.3 114.9L55.4 115.0L55.4 115.1L55.5 115.1L55.6 115.2L55.6 115.1L55.8 115.2L55.9 115.2L56.1 115.2L56.2 115.1L56.3 115.2L56.5 115.2L56.6 115.1L56.6 114.9L56.8 114.6L56.9 114.6L57.0 114.6L57.1 114.6L57.3 114.6L57.6 114.6L57.8 114.7L57.8 114.8L57.9 114.8L58.0 114.9L58.2 114.9L58.3 115.2L58.5 115.3L58.7 115.5L58.8 115.5L58.8 115.6L58.9 115.7L59.0 115.8L59.3 116.0L59.3 116.0L59.4 116.1L59.5 116.2L59.6 116.2L59.6 116.3L59.7 116.5L59.8 116.6L59.9 116.7L60.1 116.8L60.2 117.0L60.1 117.1L60.1 117.6L60.1 117.7L60.2 117.6L60.5 117.6L60.7 117.5L60.8 117.5L61.0 117.3L61.2 117.3L61.2 117.1L61.2 117.0L61.2 116.9L61.4 116.9L61.5 117.1L61.6 117.1L61.7 117.3L61.8 117.3L61.9 117.4L61.8 117.4L62.0 117.5L62.1 117.6L62.2 117.7L62.1 117.8L62.3 117.9L62.4 118.1L62.4 118.2L62.6 118.3L62.7 118.3L62.9 118.5L63.1 118.3L63.2 118.3L63.2 118.4L63.3 118.4L63.4 118.6L63.5 118.6L63.7 118.8L64.0 118.8L64.1 118.8L64.2 118.8L64.4 118.8L64.4 118.9L64.6 119.0L64.8 119.2L64.8 119.5L65.9 120.3L66.1 120.2L66.3 120.3L66.3 120.4Z"/></svg><span class="mono">Brasil</span></div>
+      <p class="mono mp-n">Obras do portfólio da Geração</p>
+    </div>
+    <div class="mp-txt">
+      <p class="lab rv">Onde instalamos</p>
+      <p class="two rv">13 obras em 6 cidades do Rio Grande do Sul. <span class="g">Do Vale do Taquari ao litoral norte.</span></p>
+      <ul class="mp-l"><li class="rv" data-k="vale"><img src="img/ev-galpao-13000.webp" width="112" height="112" alt="" loading="lazy"><b>Estância Velha</b><span class="ct">6 <small>obras</small></span></li><li class="rv" data-k="vale"><img src="img/nh-6kwp.webp" width="112" height="112" alt="" loading="lazy"><b>Novo Hamburgo</b><span class="ct">2 <small>obras</small></span></li><li class="rv" data-k="torres"><img src="img/torres-700.webp" width="112" height="112" alt="" loading="lazy"><b>Torres</b><span class="ct">2 <small>obras</small></span></li><li class="rv" data-k="nb"><img src="img/nb-rural-7500.webp" width="112" height="112" alt="" loading="lazy"><b>Nova Bréscia</b><span class="ct">1 <small>obra</small></span></li><li class="rv" data-k="vale"><img src="img/nhartz-53kwp.webp" width="112" height="112" alt="" loading="lazy"><b>Nova Hartz</b><span class="ct">1 <small>obra</small></span></li><li class="rv" data-k="imbe"><img src="img/imbe.webp" width="112" height="112" alt="" loading="lazy"><b>Imbé</b><span class="ct">1 <small>obra</small></span></li></ul>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="campo">
   <div class="wrap">
     <div class="head2">
@@ -410,6 +495,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
         <div class="big"><small class="mono">Economia estimada</small><b id="eco">R$ 0</b><span id="ecoA">por mês</span></div>
         <div><small class="mono">Sistema</small><b id="kwp">0 kWp</b></div>
         <div><small class="mono">Placas de 550 W</small><b id="pl">0</b></div>
+        <div class="wide"><small class="mono">Sem solar, em 10 anos você paga de luz</small><b id="dez">R$ 0</b><span class="fn">Estimativa com reajuste de 8% ao ano. A tarifa residencial da RGE subiu 31% em dois anos.</span></div>
       </div>
       <a class="btn lime" id="simwa" href="https://wa.me/5551996095749" target="_blank" rel="noopener">Receber proposta no WhatsApp <span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></a>
       <p class="nt">Estimativa com tarifa média de R$ 1,20 por kWh e geração de 110 kWh por kWp ao mês no RS. O projeto confirma os números, com a regra do Fio B do ano.</p>
@@ -453,13 +539,17 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 
 <footer class="foot" id="contato">
   <div class="wrap">
-    <div class="ct-g">
+    <div class="f-top">
       <div>
+        <p class="kick mono rv">Contato</p>
         <h2 class="rv">Peça sua<br><em>proposta.</em></h2>
-        <a class="tel rv" href="https://wa.me/5551996095749" target="_blank" rel="noopener">(51) 99609-5749</a>
-        <p class="ad rv">R. Benjamin Constant, 591, loja 02<br>Rio Branco, Novo Hamburgo, RS</p>
-        <a class="ig rv" href="https://www.instagram.com/geracaoenergiars.com.br/" target="_blank" rel="noopener"><svg class="ic" style="font-size:20px" aria-hidden="true"><use href="#ig"/></svg>@geracaoenergiars.com.br</a>
-        <div class="fach rv"><img src="img/fachada.webp" width="300" height="300" alt="Fachada da Geração Energia na rua Benjamin Constant, em Novo Hamburgo"><p><b>Venha conhecer.</b>A loja fica no bairro Rio Branco, em Novo Hamburgo.</p></div>
+        <p class="lead rv">Mande a conta de luz. A equipe monta a simulação e responde pelo WhatsApp.</p>
+        <a class="tel rv" href="tel:+5551996095749">(51) 99609-5749</a>
+        <div class="pills rv">
+          <a class="pill main" href="https://wa.me/5551996095749?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20uma%20proposta." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+          <a class="pill" href="tel:+5551996095749">Ligar agora</a>
+          <a class="pill" href="https://www.instagram.com/geracaoenergiars.com.br/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#ig"/></svg>Instagram</a>
+        </div>
       </div>
       <form id="form" class="rv">
         <label><span class="mono">Seu nome</span><input name="nome" autocomplete="name" required placeholder="Como podemos chamar você"></label>
@@ -471,10 +561,29 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
         <button class="btn lime" type="submit">Enviar pelo WhatsApp <span class="go"><svg class="ic" aria-hidden="true"><use href="#arr"/></svg></span></button>
       </form>
     </div>
+    <div class="f-mid rv">
+      <div class="f-brand">
+        <a class="logo" href="#inicio" aria-label="Geração Energia, início"><svg viewBox="0 0 390 285" aria-hidden="true"><use href="#logo"/></svg><b>Geração<br>Energia</b></a>
+        <p>Projeto, instalação e monitoramento de usinas solares para casas, empresas e propriedades rurais.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h3 class="mono">Navegar</h3>
+        <ul><li><a href="#solucoes">Soluções</a></li><li><a href="#obras">Obras</a></li><li><a href="#simulador">Simulador</a></li><li><a href="#como">Como funciona</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
+      </nav>
+      <div>
+        <h3 class="mono">Soluções</h3>
+        <ul><li><a href="#solucoes">Sistema on grid</a></li><li><a href="#solucoes">Híbrido com bateria</a></li><li><a href="#solucoes">Mercado livre de energia</a></li><li><a href="#solucoes">Recarga veicular</a></li></ul>
+      </div>
+      <div class="f-loja">
+        <h3 class="mono">Visite a loja</h3>
+        <img src="img/fachada.webp" width="300" height="300" alt="Fachada da Geração Energia na rua Benjamin Constant, em Novo Hamburgo">
+        <p>R. Benjamin Constant, 591, loja 02<br>Rio Branco, Novo Hamburgo, RS<br><a href="https://www.google.com/maps/search/?api=1&amp;query=R.+Benjamin+Constant+591+Novo+Hamburgo+RS" target="_blank" rel="noopener">Como chegar <svg class="ic" aria-hidden="true"><use href="#arr"/></svg></a></p>
+      </div>
+    </div>
   </div>
   <div class="wm" aria-hidden="true">Geração Energia</div>
   <div class="wrap">
-    <div class="legal after"><span>Geração Energia &amp; Soluções Ltda · CNPJ 48.343.029/0001-00</span><span>Prévia de proposta · Anvil Marketing</span></div>
+    <div class="legal"><span>Geração Energia &amp; Soluções Ltda · CNPJ 48.343.029/0001-00 · Prévia de proposta, Anvil Marketing</span><a class="up" href="#inicio">Voltar ao topo <i><svg class="ic" style="transform:rotate(-45deg)" aria-hidden="true"><use href="#arr"/></svg></i></a></div>
   </div>
 </footer>
 
@@ -586,9 +695,19 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
     d.getElementById('ecoA').textContent='por mês, cerca de R$ '+nf(Math.round(ano/100)*100)+' por ano';
     d.getElementById('kwp').textContent=nf(kwp,1)+' kWp';
     d.getElementById('pl').textContent=pl;
+    var dez=conta*12*((Math.pow(1.08,10)-1)/0.08); d.getElementById('dez').textContent='R$ '+nf(Math.round(dez/1000))+' mil';
     d.getElementById('simwa').href=wa+encodeURIComponent('Olá! Fiz a simulação no site: conta de luz de R$ '+nf(conta)+' por mês, sistema estimado de '+nf(kwp,1)+' kWp (cerca de '+pl+' placas). Quero uma proposta.');
   }
   cs.addEventListener('input',calc); calc();
+
+
+
+
+  /* mapa: pino e lista se destacam juntos */
+  var mpl=d.querySelectorAll('.mp-l li'), mpp=d.querySelectorAll('.pin');
+  function liga(k,on){mpl.forEach(function(n){if(n.dataset.k===k)n.classList.toggle('on',on)});mpp.forEach(function(n){if(n.dataset.k===k)n.classList.toggle('on',on)})}
+  mpl.forEach(function(n){n.addEventListener('mouseenter',function(){liga(n.dataset.k,true)});n.addEventListener('mouseleave',function(){liga(n.dataset.k,false)})});
+  mpp.forEach(function(n){n.addEventListener('mouseenter',function(){liga(n.dataset.k,true)});n.addEventListener('mouseleave',function(){liga(n.dataset.k,false)});n.addEventListener('focus',function(){liga(n.dataset.k,true)});n.addEventListener('blur',function(){liga(n.dataset.k,false)})});
 
   /* formulário vira mensagem de WhatsApp */
   d.getElementById('form').addEventListener('submit',function(ev){
